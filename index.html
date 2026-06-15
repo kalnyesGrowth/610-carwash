@@ -11,6 +11,7 @@
 <meta property="og:image" content="https://images.pexels.com/photos/210627/pexels-photo-210627.jpeg?auto=compress&cs=tinysrgb&w=1200">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.bunny.net">
 <link href="https://fonts.bunny.net/css2?family=bricolage-grotesque:wght@400;500;600;700;800&family=archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -148,6 +149,7 @@ section{padding:100px 0;position:relative}
 .gallery-item:hover img{transform:scale(1.1)}
 .gallery-item::after{content:'';position:absolute;inset:0;background:rgba(13,17,23,0);transition:background .3s}
 .gallery-item:hover::after{background:rgba(43,125,233,.1)}
+.gallery-item{cursor:default}
 .gallery-item:first-child{grid-column:span 2;grid-row:span 2}
 
 /* REVIEWS */
@@ -269,6 +271,7 @@ section{padding:100px 0;position:relative}
   .bg-section{background-attachment:scroll}
   .popup{padding:32px 24px}
 }
+@media(prefers-reduced-motion:reduce){.bg-section{background-attachment:scroll}.reveal{transition:none}}
 @media(max-width:480px){
   .about-stats{grid-template-columns:1fr;text-align:center}
   .gallery-grid{grid-template-columns:1fr;grid-template-rows:repeat(4,200px)}
@@ -289,7 +292,7 @@ section{padding:100px 0;position:relative}
   "openingHoursSpecification":[
     {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"08:00","closes":"18:00"}
   ],
-  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","reviewCount":"192","bestRating":"5"},
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","reviewCount":"700","bestRating":"5"},
   "geo":{"@type":"GeoCoordinates","latitude":38.463,"longitude":-77.414},
   "sameAs":["https://www.facebook.com/610CarWash/","https://www.yelp.com/biz/610-car-wash-stafford-4"],
   "paymentAccepted":"Cash, Visa, Mastercard, American Express, Discover, Apple Pay, Android Pay, PayPal"
@@ -297,6 +300,8 @@ section{padding:100px 0;position:relative}
 </script>
 </head>
 <body>
+
+<a href="#main-content" class="sr-only" style="position:absolute;top:8px;left:8px;z-index:9999;background:var(--blue);color:var(--white);padding:8px 16px;border-radius:4px" onfocus="this.style.clip='auto';this.style.width='auto';this.style.height='auto'" onblur="this.style.cssText=''">Skip to main content</a>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
@@ -316,7 +321,7 @@ section{padding:100px 0;position:relative}
   </div>
 </nav>
 
-<div class="mobile-menu" id="mobileMenu">
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
   <button class="mobile-menu-close" onclick="this.parentElement.classList.remove('active')" aria-label="Close menu">&times;</button>
   <a href="#about" onclick="this.parentElement.classList.remove('active')">About</a>
   <a href="#services" onclick="this.parentElement.classList.remove('active')">Services</a>
@@ -484,13 +489,13 @@ section{padding:100px 0;position:relative}
       <h2 class="section-title">Clean Results, Every Time</h2>
     </div>
     <div class="gallery-grid reveal">
-      <div class="gallery-item"><img src="https://images.pexels.com/photos/210627/pexels-photo-210627.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Car going through automated wash with colorful brushes" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.pexels.com/photos/1213294/pexels-photo-1213294.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Red car going through car wash tunnel" loading="lazy"></div>
       <div class="gallery-item"><img src="https://images.pexels.com/photos/4870702/pexels-photo-4870702.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hand scrubbing car headlight" loading="lazy"></div>
       <div class="gallery-item"><img src="https://images.pexels.com/photos/6872176/pexels-photo-6872176.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Man cleaning car exterior with sponge" loading="lazy"></div>
-      <div class="gallery-item"><img src="https://images.pexels.com/photos/4870671/pexels-photo-4870671.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Automobile being washed with visible rainbow" loading="lazy"></div>
-      <div class="gallery-item"><img src="https://images.pexels.com/photos/29504462/pexels-photo-29504462.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Professional car wash worker cleaning vehicle" loading="lazy"></div>
-      <div class="gallery-item"><img src="https://images.pexels.com/photos/6872609/pexels-photo-6872609.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Luxury car covered in wash foam" loading="lazy"></div>
-      <div class="gallery-item"><img src="https://images.pexels.com/photos/20381587/pexels-photo-20381587.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Silver car with water droplets after wash" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.pexels.com/photos/4886355/pexels-photo-4886355.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Car wash foam and water spray" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.pexels.com/photos/3807386/pexels-photo-3807386.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Worker drying car after wash" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Detailing interior surfaces" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.pexels.com/photos/6872167/pexels-photo-6872167.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Shiny black car after professional wash" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -508,17 +513,17 @@ section{padding:100px 0;position:relative}
     </div>
     <div class="reviews-grid">
       <div class="review-card reveal">
-        <div class="review-card-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-card-stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <div class="review-card-text">"Great value. Been through this wash several times and have always been impressed. It is like a fast and convenient detailing service, for a fraction of the cost."</div>
         <div class="review-card-author"><div class="review-card-avatar">G</div><div><div class="review-card-name">Google Reviewer</div><div class="review-card-source">Google, Nov 2025</div></div></div>
       </div>
       <div class="review-card reveal">
-        <div class="review-card-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-card-stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <div class="review-card-text">"The 610 Car Wash Team always gives my F150 truck a wash and cleaning above any other establishment and for a reasonable price. I feel great about its looks when I roll out of there!"</div>
         <div class="review-card-author"><div class="review-card-avatar">T</div><div><div class="review-card-name">Truck Owner</div><div class="review-card-source">Google, Nov 2025</div></div></div>
       </div>
       <div class="review-card reveal">
-        <div class="review-card-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-card-stars" role="img" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <div class="review-card-text">"Love this car wash. The managers are extremely helpful. They treat my car as if it were theirs. Great place!"</div>
         <div class="review-card-author"><div class="review-card-avatar">R</div><div><div class="review-card-name">Regular Customer</div><div class="review-card-source">Google, Aug 2024</div></div></div>
       </div>
@@ -639,7 +644,7 @@ section{padding:100px 0;position:relative}
         <div class="location-block"><h4>Accepted Payments</h4><p>Visa, Mastercard, Amex, Discover, Apple Pay, Android Pay, PayPal, Cash</p></div>
       </div>
       <div class="location-map reveal">
-        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=610+Carwash,389+Garrisonville+Rd,Stafford,VA+22554" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="610 Carwash location map"></iframe>
+        <iframe src="https://maps.google.com/maps?q=610+Carwash,389+Garrisonville+Rd,Stafford,VA+22554&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="610 Carwash location map"></iframe>
       </div>
     </div>
   </div>
@@ -740,10 +745,12 @@ const reveals=document.querySelectorAll('.reveal');const revealObs=new Intersect
 document.querySelectorAll('.faq-question').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const answer=item.querySelector('.faq-answer');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-question').setAttribute('aria-expanded','false');i.querySelector('.faq-answer').style.maxHeight=null});if(!isOpen){item.classList.add('open');q.setAttribute('aria-expanded','true');answer.style.maxHeight=answer.scrollHeight+'px'}})});
 const timeline=document.getElementById('timeline');const timelineProgress=document.getElementById('timelineProgress');const steps=document.querySelectorAll('.timeline-step');
 if(timeline&&timelineProgress){const vh=window.innerHeight;const scrollHandler=()=>{const r=timeline.getBoundingClientRect();const progress=Math.max(0,Math.min(1,(vh*.5-r.top)/(r.height-vh*.3)));timelineProgress.style.height=(progress*100)+'%';steps.forEach((step,i)=>{step.classList.toggle('active',progress>=(i+.5)/steps.length)})};const timelineObs=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){window.addEventListener('scroll',scrollHandler,{passive:true});scrollHandler()}else{window.removeEventListener('scroll',scrollHandler)}})},{threshold:0});timelineObs.observe(timeline)}
-let popupShown={welcome:false,exit:false,review:false};function closePopup(id){document.getElementById(id).classList.remove('active');if(id==='popupWelcome'&&!popupShown.review){const p=window.scrollY/(document.body.scrollHeight-window.innerHeight);if(p>.7){document.getElementById('popupReview').classList.add('active');popupShown.review=true}}}
-setTimeout(()=>{if(!popupShown.welcome){document.getElementById('popupWelcome').classList.add('active');popupShown.welcome=true}},4000);
-document.addEventListener('mouseout',e=>{if(e.clientY<5&&!popupShown.exit&&popupShown.welcome){document.getElementById('popupExit').classList.add('active');popupShown.exit=true}});
-window.addEventListener('scroll',()=>{const p=window.scrollY/(document.body.scrollHeight-window.innerHeight);if(p>.7&&!popupShown.review&&popupShown.welcome){document.getElementById('popupReview').classList.add('active');popupShown.review=true}},{passive:true});
+let popupShown={welcome:false,exit:false,review:false};let popupIsOpen=false;
+function showPopup(id,key){if(popupIsOpen)return;document.getElementById(id).classList.add('active');popupShown[key]=true;popupIsOpen=true}
+function closePopup(id){document.getElementById(id).classList.remove('active');popupIsOpen=false;if(id==='popupWelcome'&&!popupShown.review){const p=window.scrollY/(document.body.scrollHeight-window.innerHeight);if(p>.7)showPopup('popupReview','review')}}
+setTimeout(()=>{if(!popupShown.welcome)showPopup('popupWelcome','welcome')},4000);
+document.addEventListener('mouseout',e=>{if(e.clientY<5&&!popupShown.exit&&popupShown.welcome)showPopup('popupExit','exit')});
+window.addEventListener('scroll',()=>{const p=window.scrollY/(document.body.scrollHeight-window.innerHeight);if(p>.7&&!popupShown.review&&popupShown.welcome)showPopup('popupReview','review')},{passive:true});
 document.querySelectorAll('.popup-overlay').forEach(o=>{o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('active')})});
 if(window.innerWidth<768){const v=document.querySelector('.hero-video');if(v)v.removeAttribute('autoplay')}
 </script>
