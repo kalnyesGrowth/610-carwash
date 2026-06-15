@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>610 Carwash | Full-Service Car Wash & Detailing in Stafford, VA Since 1988</title>
+<meta name="description" content="Stafford's trusted full-service car wash since 1988. Brushless wash, interior/exterior detailing, ozone treatment. 389 Garrisonville Rd. Open Mon-Sat 8AM-6PM.">
+<meta property="og:title" content="610 Carwash | Stafford, VA Since 1988">
+<meta property="og:description" content="Full-service car wash and detailing. Preserving your automotive investment since 1988. 389 Garrisonville Rd, Stafford VA.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.pexels.com/photos/210627/pexels-photo-210627.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css2?family=bricolage-grotesque:wght@400;500;600;700;800&family=archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:hidden}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+:root{
+  --font-heading:'Bricolage Grotesque',sans-serif;
+  --font-body:'Archivo',-apple-system,sans-serif;
+  --blue:#2B7DE9;
+  --blue-light:#4A9BFF;
+  --blue-dim:rgba(43,125,233,0.10);
+  --blue-glow:rgba(43,125,233,0.25);
+  --navy:#0D1117;
+  --navy-2:#111820;
+  --navy-3:#161D27;
+  --navy-4:#1C2533;
+  --slate:#8B949E;
+  --white:#F0F6FC;
+  --white-70:rgba(240,246,252,0.7);
+  --white-50:rgba(240,246,252,0.5);
+  --white-30:rgba(240,246,252,0.3);
+  --white-10:rgba(240,246,252,0.1);
+  --text-xs:0.694rem;--text-sm:0.833rem;--text-base:1rem;--text-lg:1.2rem;
+  --text-xl:1.44rem;--text-2xl:1.728rem;--text-3xl:2.074rem;
+  --text-4xl:2.488rem;--text-5xl:2.986rem;--text-6xl:3.583rem;
+}
+body{font-family:var(--font-body);font-size:var(--text-base);line-height:1.7;color:var(--white);background:var(--navy);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,h5{font-family:var(--font-heading);font-weight:700;line-height:1.12}
+h1{font-size:var(--text-6xl)}h2{font-size:var(--text-4xl)}h3{font-size:var(--text-2xl)}h4{font-size:var(--text-xl)}
+a{color:var(--blue);text-decoration:none;transition:color .3s}a:hover{color:var(--blue-light)}
+img{max-width:100%;height:auto;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.section-label{font-family:var(--font-body);font-size:var(--text-xs);font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;display:block}
+.section-title{margin-bottom:20px}
+.section-sub{font-size:var(--text-lg);color:var(--white-50);max-width:600px;line-height:1.6}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;font-family:var(--font-body);font-size:var(--text-sm);font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;transition:all .4s cubic-bezier(.25,.46,.45,.94);border-radius:4px;white-space:normal;max-width:100%;text-align:center}
+.btn-primary{background:var(--blue);color:var(--white)}
+.btn-primary:hover{background:var(--blue-light);transform:translateY(-2px);box-shadow:0 8px 30px var(--blue-glow)}
+.btn-outline{background:transparent;color:var(--blue);border:1px solid var(--blue)}
+.btn-outline:hover{background:var(--blue);color:var(--white)}
+.btn-thunder{position:relative;overflow:hidden}
+.btn-thunder::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);transition:left .6s}
+.btn-thunder:hover::after{left:100%}
+.blue-line{width:60px;height:2px;background:var(--blue);margin:20px 0}
+section{padding:100px 0;position:relative}
+.bg-section{position:relative;background-size:cover;background-position:center;background-attachment:fixed}
+.bg-section::before{content:'';position:absolute;inset:0;background:rgba(13,17,23,.85)}
+.bg-section>*{position:relative;z-index:2}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 0;transition:all .4s;background:transparent}
+.nav.scrolled{background:rgba(13,17,23,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:12px 0;box-shadow:0 2px 40px rgba(0,0,0,.5)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 24px}
+.nav-logo{font-family:var(--font-heading);font-size:var(--text-2xl);font-weight:800;color:var(--blue);letter-spacing:.02em}
+.nav-logo span{color:var(--white);font-weight:400;font-size:var(--text-lg)}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{font-size:var(--text-sm);font-weight:600;color:var(--white-50);letter-spacing:.06em;text-transform:uppercase;transition:color .3s}
+.nav-links a:hover{color:var(--blue)}
+.nav-cta{padding:10px 24px!important;background:var(--blue)!important;color:var(--white)!important;border-radius:4px;font-weight:700!important}
+.nav-cta:hover{background:var(--blue-light)!important}
+.mobile-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.mobile-toggle span{width:26px;height:2px;background:var(--blue);transition:all .3s}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(13,17,23,.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+.mobile-menu.active{display:flex}
+.mobile-menu a{font-family:var(--font-heading);font-size:var(--text-2xl);color:var(--white)}
+.mobile-menu-close{position:absolute;top:24px;right:24px;background:none;border:none;color:var(--blue);font-size:32px;cursor:pointer;line-height:1}
+
+/* HERO */
+.hero{position:relative;height:100vh;min-height:700px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:0}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,17,23,.35) 0%,rgba(13,17,23,.6) 50%,rgba(13,17,23,.95) 100%);z-index:1}
+.hero-content{position:relative;z-index:2;max-width:840px;padding:0 24px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border:1px solid rgba(43,125,233,.25);border-radius:100px;font-size:var(--text-xs);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:28px;backdrop-filter:blur(10px);background:rgba(43,125,233,.06)}
+.hero h1{margin-bottom:24px;text-shadow:0 4px 40px rgba(0,0,0,.5)}
+.hero h1 em{font-style:italic;color:var(--blue)}
+.hero-desc{font-size:var(--text-lg);color:var(--white-50);margin-bottom:40px;max-width:580px;margin-left:auto;margin-right:auto}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.hero-scroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--white-30);font-size:var(--text-xs);letter-spacing:.1em;text-transform:uppercase;animation:scrollBounce 2s infinite}
+@keyframes scrollBounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--blue),transparent)}
+
+/* ABOUT */
+.about{background:var(--navy-2)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-img{border-radius:6px;overflow:hidden;position:relative}
+.about-img img{width:100%;height:500px;object-fit:cover}
+.about-img-badge{position:absolute;bottom:24px;left:24px;background:var(--blue);color:var(--white);padding:12px 20px;font-weight:700;font-size:var(--text-sm);letter-spacing:.06em;border-radius:4px}
+.about-text p{color:var(--white-50);margin-bottom:16px}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px;padding-top:36px;border-top:1px solid var(--white-10)}
+.about-stat-num{font-family:var(--font-heading);font-size:var(--text-3xl);font-weight:700;color:var(--blue)}
+.about-stat-label{font-size:var(--text-xs);color:var(--white-30);text-transform:uppercase;letter-spacing:.1em;margin-top:4px}
+
+/* SERVICES */
+.services{background:var(--navy)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.service-card{background:var(--navy-3);border-radius:6px;overflow:hidden;transition:transform .4s,box-shadow .4s;border:1px solid var(--white-10)}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.4);border-color:rgba(43,125,233,.15)}
+.service-card-img{height:220px;overflow:hidden}
+.service-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.service-card:hover .service-card-img img{transform:scale(1.08)}
+.service-card-body{padding:24px}
+.service-card-name{font-family:var(--font-heading);font-size:var(--text-xl);font-weight:600;margin-bottom:8px}
+.service-card-desc{font-size:var(--text-sm);color:var(--white-50);line-height:1.6}
+
+/* PACKAGES */
+.packages{background-image:url('https://images.pexels.com/photos/29504461/pexels-photo-29504461.jpeg?auto=compress&cs=tinysrgb&w=1920')}
+.packages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.package-card{background:rgba(22,29,39,.9);backdrop-filter:blur(10px);border:1px solid var(--white-10);border-radius:6px;padding:36px;text-align:center;transition:border-color .3s,transform .3s}
+.package-card:hover{border-color:rgba(43,125,233,.3);transform:translateY(-4px)}
+.package-card.featured{border-color:var(--blue);position:relative}
+.package-featured-tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--blue);color:var(--white);padding:6px 20px;font-size:var(--text-xs);font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:100px}
+.package-name{font-family:var(--font-heading);font-size:var(--text-2xl);font-weight:700;margin-bottom:8px;margin-top:8px}
+.package-desc{font-size:var(--text-sm);color:var(--white-50);margin-bottom:24px}
+.package-features{list-style:none;margin-bottom:28px;text-align:left}
+.package-features li{padding:10px 0;border-bottom:1px solid var(--white-10);font-size:var(--text-sm);color:var(--white-70);display:flex;align-items:center;gap:10px}
+.package-check{flex-shrink:0}
+.package-check svg{width:16px;height:16px;fill:var(--blue)}
+
+/* WHY US */
+.why-us{background:var(--navy-2)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+.why-card{padding:32px 24px;background:var(--navy-3);border:1px solid var(--white-10);border-radius:6px;text-align:center;transition:border-color .3s,transform .3s}
+.why-card:hover{border-color:rgba(43,125,233,.2);transform:translateY(-4px)}
+.why-icon{width:56px;height:56px;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--blue-dim)}
+.why-icon svg{width:26px;height:26px;fill:var(--blue)}
+.why-title{font-family:var(--font-heading);font-size:var(--text-lg);font-weight:600;margin-bottom:8px}
+.why-desc{font-size:var(--text-sm);color:var(--white-50);line-height:1.6}
+
+/* GALLERY */
+.gallery{background:var(--navy)}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,260px);gap:8px}
+.gallery-item{overflow:hidden;border-radius:6px;cursor:pointer;position:relative}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gallery-item:hover img{transform:scale(1.1)}
+.gallery-item::after{content:'';position:absolute;inset:0;background:rgba(13,17,23,0);transition:background .3s}
+.gallery-item:hover::after{background:rgba(43,125,233,.1)}
+.gallery-item:first-child{grid-column:span 2;grid-row:span 2}
+
+/* REVIEWS */
+.reviews{background-image:url('https://images.pexels.com/photos/4870671/pexels-photo-4870671.jpeg?auto=compress&cs=tinysrgb&w=1920');text-align:center}
+.reviews-rating{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:12px}
+.reviews-stars{color:var(--blue);font-size:var(--text-2xl);letter-spacing:4px}
+.reviews-count{font-size:var(--text-sm);color:var(--white-30)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px}
+.review-card{background:rgba(22,29,39,.9);backdrop-filter:blur(10px);border:1px solid var(--white-10);border-radius:6px;padding:32px;text-align:left}
+.review-card-stars{color:var(--blue);margin-bottom:16px;font-size:var(--text-sm);letter-spacing:2px}
+.review-card-text{font-style:italic;color:var(--white-50);font-size:var(--text-base);line-height:1.7;margin-bottom:20px}
+.review-card-author{display:flex;align-items:center;gap:12px}
+.review-card-avatar{width:40px;height:40px;border-radius:50%;background:var(--blue-dim);display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:700;color:var(--blue);font-size:var(--text-sm)}
+.review-card-name{font-weight:600;font-size:var(--text-sm)}
+.review-card-source{font-size:var(--text-xs);color:var(--white-30)}
+.review-google-cta{display:inline-flex;align-items:center;gap:12px;padding:20px 36px;background:rgba(22,29,39,.9);border:1px solid rgba(43,125,233,.2);border-radius:6px;margin-top:24px}
+.review-google-cta p{font-size:var(--text-sm);color:var(--white-50)}
+.review-google-cta strong{color:var(--blue);font-weight:600}
+
+/* PROCESS TIMELINE */
+.process{background-image:url('https://images.pexels.com/photos/29504462/pexels-photo-29504462.jpeg?auto=compress&cs=tinysrgb&w=1920')}
+.timeline{position:relative;max-width:700px;margin:60px auto 0}
+.timeline-line{position:absolute;left:24px;top:0;width:2px;height:100%;background:var(--white-10)}
+.timeline-progress{position:absolute;left:24px;top:0;width:2px;height:0;background:var(--blue);transition:height .1s linear}
+.timeline-step{position:relative;padding-left:72px;padding-bottom:48px;opacity:.3;transform:translateX(-10px);transition:all .6s cubic-bezier(.25,.46,.45,.94)}
+.timeline-step.active{opacity:1;transform:translateX(0)}
+.timeline-dot{position:absolute;left:14px;top:4px;width:22px;height:22px;border-radius:50%;background:var(--navy);border:2px solid var(--white-10);transition:all .4s}
+.timeline-step.active .timeline-dot{background:var(--blue);border-color:var(--blue);box-shadow:0 0 20px var(--blue-glow)}
+.timeline-num{font-family:var(--font-heading);font-size:var(--text-xs);font-weight:700;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.timeline-title{font-family:var(--font-heading);font-size:var(--text-xl);font-weight:600;margin-bottom:8px}
+.timeline-desc{font-size:var(--text-sm);color:var(--white-50);line-height:1.6}
+
+/* CTA */
+.cta-section{background:var(--navy);text-align:center;padding:80px 0}
+
+/* FAQ */
+.faq{background:var(--navy-2)}
+.faq-grid{max-width:800px;margin:48px auto 0}
+.faq-item{border-bottom:1px solid var(--white-10)}
+.faq-question{width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 0;background:none;border:none;color:var(--white);font-family:var(--font-body);font-size:var(--text-base);font-weight:600;cursor:pointer;text-align:left}
+.faq-question svg{width:20px;height:20px;fill:var(--blue);transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-question svg{transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s}
+.faq-answer-inner{padding:0 0 20px;font-size:var(--text-sm);color:var(--white-50);line-height:1.7}
+
+/* LOCATION */
+.location{background-image:url('https://images.pexels.com/photos/20381587/pexels-photo-20381587.jpeg?auto=compress&cs=tinysrgb&w=1920')}
+.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.location-info{display:flex;flex-direction:column;gap:32px}
+.location-block h4{font-size:var(--text-lg);margin-bottom:12px;color:var(--blue)}
+.location-block p,.location-block li{font-size:var(--text-sm);color:var(--white-50);line-height:1.8}
+.location-block ul{list-style:none}
+.location-block li{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--white-10)}
+.location-block li span:last-child{color:var(--white);font-weight:500}
+.location-map{border-radius:6px;overflow:hidden;min-height:400px}
+.location-map iframe{width:100%;height:100%;min-height:400px;border:none;filter:grayscale(.6) brightness(.8) contrast(1.1)}
+
+/* CONTACT */
+.contact{background:var(--navy-2)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.contact-form{display:flex;flex-direction:column;gap:16px}
+.contact-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.contact-input,.contact-textarea{width:100%;padding:14px 18px;background:var(--navy-3);border:1px solid var(--white-10);border-radius:4px;color:var(--white);font-family:var(--font-body);font-size:var(--text-sm);transition:border-color .3s}
+.contact-input:focus,.contact-textarea:focus{outline:none;border-color:var(--blue)}
+.contact-textarea{resize:vertical;min-height:120px}
+.contact-input::placeholder,.contact-textarea::placeholder{color:var(--white-30)}
+
+/* FOOTER */
+.footer{background:var(--navy);border-top:1px solid var(--white-10);padding:60px 0 32px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand p{font-size:var(--text-sm);color:var(--white-30);max-width:280px;line-height:1.7;margin-top:16px}
+.footer-col h4{font-size:var(--text-sm);font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);margin-bottom:16px}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:10px}
+.footer-col a{font-size:var(--text-sm);color:var(--white-30)}
+.footer-col a:hover{color:var(--blue)}
+.footer-bottom{padding-top:24px;border-top:1px solid var(--white-10);display:flex;justify-content:space-between;align-items:center;font-size:var(--text-xs);color:var(--white-30)}
+
+/* POPUPS */
+.popup-overlay{display:none;position:fixed;inset:0;background:rgba(13,17,23,.88);z-index:2000;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+.popup-overlay.active{display:flex}
+.popup{background:var(--navy-3);border:1px solid rgba(43,125,233,.15);border-radius:8px;padding:48px;max-width:480px;width:90%;position:relative;text-align:center;animation:popIn .4s cubic-bezier(.25,.46,.45,.94)}
+@keyframes popIn{from{opacity:0;transform:scale(.9) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.popup-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--white-30);font-size:24px;cursor:pointer;transition:color .3s;line-height:1}
+.popup-close:hover{color:var(--blue)}
+.popup h3{margin-bottom:12px}
+.popup p{color:var(--white-50);font-size:var(--text-sm);margin-bottom:24px}
+.popup-input{width:100%;padding:14px 18px;background:var(--navy);border:1px solid rgba(43,125,233,.2);border-radius:4px;color:var(--white);font-family:var(--font-body);font-size:var(--text-sm);margin-bottom:12px}
+.popup-input:focus{outline:none;border-color:var(--blue)}
+.popup-input::placeholder{color:var(--white-30)}
+
+/* REVEALS */
+.reveal{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(.25,.46,.45,.94)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .services-grid{grid-template-columns:repeat(2,1fr)}.why-grid{grid-template-columns:repeat(2,1fr)}
+  .packages-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .gallery-grid{grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,220px)}
+  .gallery-item:first-child{grid-column:span 1;grid-row:span 1}
+}
+@media(max-width:768px){
+  h1{font-size:var(--text-3xl)}h2{font-size:var(--text-2xl)}h3{font-size:var(--text-xl)}
+  body{font-size:15px}section{padding:60px 0}
+  .nav-links{display:none}.mobile-toggle{display:flex}
+  .hero{min-height:600px}.hero h1{font-size:var(--text-3xl)}
+  .about-grid,.contact-grid,.location-grid{grid-template-columns:1fr;gap:36px}
+  .about-img img{height:300px}
+  .services-grid,.reviews-grid,.why-grid,.packages-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(3,180px)}
+  .footer-grid{grid-template-columns:1fr;gap:24px}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+  .hero-btns{flex-direction:column;align-items:center}
+  .btn{padding:14px 28px}
+  .about-stats{grid-template-columns:repeat(3,1fr);gap:16px}
+  .contact-row{grid-template-columns:1fr}
+  .bg-section{background-attachment:scroll}
+  .popup{padding:32px 24px}
+}
+@media(max-width:480px){
+  .about-stats{grid-template-columns:1fr;text-align:center}
+  .gallery-grid{grid-template-columns:1fr;grid-template-rows:repeat(4,200px)}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AutoWash",
+  "name":"610 Carwash",
+  "image":"https://images.pexels.com/photos/210627/pexels-photo-210627.jpeg?auto=compress&cs=tinysrgb&w=1260",
+  "address":{"@type":"PostalAddress","streetAddress":"389 Garrisonville Rd","addressLocality":"Stafford","addressRegion":"VA","postalCode":"22554","addressCountry":"US"},
+  "telephone":"+1-540-659-8885",
+  "url":"https://610carwashva.com/",
+  "priceRange":"$$",
+  "foundingDate":"1988",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"08:00","closes":"18:00"}
+  ],
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","reviewCount":"192","bestRating":"5"},
+  "geo":{"@type":"GeoCoordinates","latitude":38.463,"longitude":-77.414},
+  "sameAs":["https://www.facebook.com/610CarWash/","https://www.yelp.com/biz/610-car-wash-stafford-4"],
+  "paymentAccepted":"Cash, Visa, Mastercard, American Express, Discover, Apple Pay, Android Pay, PayPal"
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">610 <span>Carwash</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#location">Visit</a></li>
+      <li><a href="tel:+15406598885" class="nav-cta">Call Now</a></li>
+    </ul>
+    <button class="mobile-toggle" onclick="document.getElementById('mobileMenu').classList.add('active')" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="this.parentElement.classList.remove('active')" aria-label="Close menu">&times;</button>
+  <a href="#about" onclick="this.parentElement.classList.remove('active')">About</a>
+  <a href="#services" onclick="this.parentElement.classList.remove('active')">Services</a>
+  <a href="#gallery" onclick="this.parentElement.classList.remove('active')">Gallery</a>
+  <a href="#reviews" onclick="this.parentElement.classList.remove('active')">Reviews</a>
+  <a href="#location" onclick="this.parentElement.classList.remove('active')">Visit</a>
+  <a href="tel:+15406598885" class="btn btn-primary" style="margin-top:12px">Call Now</a>
+</div>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <video class="hero-video" autoplay muted loop playsinline aria-hidden="true" poster="https://images.pexels.com/photos/210627/pexels-photo-210627.jpeg?auto=compress&cs=tinysrgb&w=1920">
+    <source src="https://videos.pexels.com/video-files/4863282/4863282-hd_1920_1080_30fps.mp4" type="video/mp4">
+  </video>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Stafford's Trusted Car Wash Since 1988
+    </div>
+    <h1>Your Car<br>Deserves <em>Better.</em></h1>
+    <p class="hero-desc">Full-service car wash and detailing on Route 610. Brushless technology, hand-finished results. Preserving your automotive investment for over 35 years.</p>
+    <div class="hero-btns">
+      <a href="tel:+15406598885" class="btn btn-primary btn-thunder">Call (540) 659-8885</a>
+      <a href="#services" class="btn btn-outline">View Services</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img reveal">
+        <img src="https://images.pexels.com/photos/6873008/pexels-photo-6873008.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Car being hand washed at professional wash bay" loading="lazy">
+        <div class="about-img-badge">Since 1988</div>
+      </div>
+      <div class="about-text reveal">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">Stafford's Original<br>Full-Service Car Wash</h2>
+        <div class="blue-line"></div>
+        <p>610 Carwash has been a fixture on Garrisonville Road since 1988. For over 35 years, we have been the car wash Stafford trusts. We are not a chain. We are not a franchise. We are a locally owned business that takes pride in every vehicle that rolls through our bay.</p>
+        <p>Our brushless wash technology is gentle on your paint while tough on dirt. Every wash is finished by hand. We treat your vehicle the way we treat our own. From a quick exterior rinse to a full interior detail, we do it right every time.</p>
+        <div class="about-stats">
+          <div><div class="about-stat-num">35+</div><div class="about-stat-label">Years in Business</div></div>
+          <div><div class="about-stat-num">700+</div><div class="about-stat-label">Reviews</div></div>
+          <div><div class="about-stat-num">6</div><div class="about-stat-label">Days a Week</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:60px" class="reveal">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Full-Service Car Care</h2>
+      <p class="section-sub" style="margin:0 auto">From a quick wash to a complete restoration. Every service, every time, done right.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-card-img"><img src="https://images.pexels.com/photos/4870739/pexels-photo-4870739.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Car covered in soap suds during brushless wash" loading="lazy"></div>
+        <div class="service-card-body">
+          <div class="service-card-name">Brushless Car Wash</div>
+          <div class="service-card-desc">Our signature brushless wash system is gentle on your finish and tough on grime. No scratches, no swirl marks. Just a clean, protected vehicle.</div>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-card-img"><img src="https://images.pexels.com/photos/17029940/pexels-photo-17029940.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Interior car detailing with cloth" loading="lazy"></div>
+        <div class="service-card-body">
+          <div class="service-card-name">Interior Detailing</div>
+          <div class="service-card-desc">Deep cleaning, shampooing, and conditioning for your cabin. We restore seats, carpets, dashboard, and every surface until it looks and smells like new.</div>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-card-img"><img src="https://images.pexels.com/photos/37809565/pexels-photo-37809565.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Exterior polishing and waxing" loading="lazy"></div>
+        <div class="service-card-body">
+          <div class="service-card-name">Exterior Detailing</div>
+          <div class="service-card-desc">Hand wash, clay bar, polish, and wax. We bring back the factory shine. Bug removal, tar removal, and paint protection included in every detail.</div>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-card-img"><img src="https://images.pexels.com/photos/17623850/pexels-photo-17623850.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wheel cleaning with professional products" loading="lazy"></div>
+        <div class="service-card-body">
+          <div class="service-card-name">Tire & Wheel Cleaning</div>
+          <div class="service-card-desc">Brake dust, road grime, and curb stains removed. We clean and dress your tires and wheels until they shine like the day you bought them.</div>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-card-img"><img src="https://images.pexels.com/photos/5233271/pexels-photo-5233271.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Complete vehicle wash and care service" loading="lazy"></div>
+        <div class="service-card-body">
+          <div class="service-card-name">Vacuuming & Windows</div>
+          <div class="service-card-desc">Complete interior vacuum with crevice tool. Crystal clear windows inside and out. Included with every full-service wash or available standalone.</div>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-card-img"><img src="https://images.pexels.com/photos/6872609/pexels-photo-6872609.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Luxury car getting ozone treatment" loading="lazy"></div>
+        <div class="service-card-body">
+          <div class="service-card-name">Ozone Treatment</div>
+          <div class="service-card-desc">Eliminate stubborn odors from smoke, pets, food, and mildew. Our ozone generator neutralizes bacteria and leaves your cabin fresh at the molecular level.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="packages bg-section" id="packages">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:60px" class="reveal">
+      <span class="section-label">Our Packages</span>
+      <h2 class="section-title">Pick Your Level of Clean</h2>
+      <p class="section-sub" style="margin:0 auto">Every package includes our brushless wash technology. Call for current pricing.</p>
+    </div>
+    <div class="packages-grid">
+      <div class="package-card reveal">
+        <div class="package-name">Express Wash</div>
+        <div class="package-desc">Quick, thorough, and out the door</div>
+        <ul class="package-features">
+          <li><span class="package-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Brushless exterior wash</li>
+          <li><span class="package-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Hand dry</li>
+          <li><span class="package-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Window cleaning</li>
+          <li><span class="package-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Tire dressing</li>
+        </ul>
+        <a href="tel:+15406598885" class="btn btn-outline" style="width:100%;justify-content:center">Call for Price</a>
+      </div>
+      <div class="package-card featured reveal">
+        <div class="package-featured-tag">Most Popular</div>
+        <div class="package-name">Full Service</div>
+        <div class="package-desc">The complete 610 experience</div>
+        <ul class="package-features">
+          <li><span class="package-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Everything in Express</li>
+          <li><span class="package-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Full interior vacuum</li>
+          <li><span class="package-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Dashboard wipe-down</li>
+          <li><span class="package-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Interior windows</li>
+          <li><span class="package-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Air freshener</li>
+        </ul>
+        <a href="tel:+15406598885" class="btn btn-primary btn-thunder" style="width:100%;justify-content:center">Call for Price</a>
+      </div>
+      <div class="package-card reveal">
+        <div class="package-name">Detail Package</div>
+        <div class="package-desc">Showroom-ready results</div>
+        <ul class="package-features">
+          <li><span class="package-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Everything in Full Service</li>
+          <li><span class="package-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Hand wax & polish</li>
+          <li><span class="package-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Carpet shampooing</li>
+          <li><span class="package-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Leather conditioning</li>
+          <li><span class="package-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>Bug & tar removal</li>
+        </ul>
+        <a href="tel:+15406598885" class="btn btn-outline" style="width:100%;justify-content:center">Call for Price</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px" class="reveal">
+      <span class="section-label">Gallery</span>
+      <h2 class="section-title">Clean Results, Every Time</h2>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item"><img src="https://images.pexels.com/photos/210627/pexels-photo-210627.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Car going through automated wash with colorful brushes" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.pexels.com/photos/4870702/pexels-photo-4870702.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hand scrubbing car headlight" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.pexels.com/photos/6872176/pexels-photo-6872176.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Man cleaning car exterior with sponge" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.pexels.com/photos/4870671/pexels-photo-4870671.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Automobile being washed with visible rainbow" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.pexels.com/photos/29504462/pexels-photo-29504462.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Professional car wash worker cleaning vehicle" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.pexels.com/photos/6872609/pexels-photo-6872609.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Luxury car covered in wash foam" loading="lazy"></div>
+      <div class="gallery-item"><img src="https://images.pexels.com/photos/20381587/pexels-photo-20381587.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Silver car with water droplets after wash" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews bg-section" id="reviews">
+  <div class="container">
+    <div style="margin-bottom:60px" class="reveal">
+      <span class="section-label">What Customers Say</span>
+      <h2 class="section-title">Real Reviews from Real Customers</h2>
+      <div class="reviews-rating">
+        <span class="reviews-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="reviews-count">700+ Reviews across Google, Yelp & Facebook</span>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-card-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-card-text">"Great value. Been through this wash several times and have always been impressed. It is like a fast and convenient detailing service, for a fraction of the cost."</div>
+        <div class="review-card-author"><div class="review-card-avatar">G</div><div><div class="review-card-name">Google Reviewer</div><div class="review-card-source">Google, Nov 2025</div></div></div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-card-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-card-text">"The 610 Car Wash Team always gives my F150 truck a wash and cleaning above any other establishment and for a reasonable price. I feel great about its looks when I roll out of there!"</div>
+        <div class="review-card-author"><div class="review-card-avatar">T</div><div><div class="review-card-name">Truck Owner</div><div class="review-card-source">Google, Nov 2025</div></div></div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-card-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-card-text">"Love this car wash. The managers are extremely helpful. They treat my car as if it were theirs. Great place!"</div>
+        <div class="review-card-author"><div class="review-card-avatar">R</div><div><div class="review-card-name">Regular Customer</div><div class="review-card-source">Google, Aug 2024</div></div></div>
+      </div>
+    </div>
+    <div class="review-google-cta reveal">
+      <div><p><strong>Happy with your wash?</strong> Leave us a Google review and get 10% off your next detail service.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-us">
+  <div class="container">
+    <div style="text-align:center" class="reveal">
+      <span class="section-label">Why 610</span>
+      <h2 class="section-title">What Sets Us Apart</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
+        <div class="why-title">Brushless Tech</div>
+        <div class="why-desc">No brushes touching your paint means no swirl marks, no scratches, no damage. Just clean.</div>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></div>
+        <div class="why-title">35+ Years</div>
+        <div class="why-desc">We have been on Garrisonville Road since 1988. That kind of longevity does not happen by accident.</div>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div class="why-title">Hand Finished</div>
+        <div class="why-desc">Every vehicle gets a hand dry and final inspection. We do not let anything leave looking less than its best.</div>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg></div>
+        <div class="why-title">All Payments</div>
+        <div class="why-desc">Visa, Mastercard, Amex, Discover, Apple Pay, Android Pay, PayPal. We accept it all.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS TIMELINE -->
+<section class="process bg-section" id="process">
+  <div class="container">
+    <div style="text-align:center" class="reveal">
+      <span class="section-label">How It Works</span>
+      <h2 class="section-title">From Dirty to Done</h2>
+      <p class="section-sub" style="margin:0 auto">Drive in, relax, drive out clean. That simple.</p>
+    </div>
+    <div class="timeline" id="timeline">
+      <div class="timeline-line"></div>
+      <div class="timeline-progress" id="timelineProgress"></div>
+      <div class="timeline-step"><div class="timeline-dot"></div><div class="timeline-num">Step 01</div><div class="timeline-title">Pull In</div><div class="timeline-desc">Drive into our bay at 389 Garrisonville Rd. Our team greets you, walks around your vehicle, and helps you choose the right service for today.</div></div>
+      <div class="timeline-step"><div class="timeline-dot"></div><div class="timeline-num">Step 02</div><div class="timeline-title">We Go to Work</div><div class="timeline-desc">Our brushless system cleans your exterior without touching your paint. For full-service and detail packages, our team handles the interior at the same time.</div></div>
+      <div class="timeline-step"><div class="timeline-dot"></div><div class="timeline-num">Step 03</div><div class="timeline-title">Hand Finish</div><div class="timeline-desc">Every vehicle gets a hand dry, window wipe, and tire dressing. We inspect the results before you do. Nothing leaves unless it meets our standard.</div></div>
+      <div class="timeline-step"><div class="timeline-dot"></div><div class="timeline-num">Step 04</div><div class="timeline-title">Drive Out Clean</div><div class="timeline-desc">Pay with any method you prefer. Roll out with a vehicle that looks, feels, and smells like the day you bought it. See you next time.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div style="max-width:700px;margin:0 auto" class="reveal">
+      <span class="section-label">Ready?</span>
+      <h2 class="section-title">Your Car Is Waiting</h2>
+      <p class="section-sub" style="margin:0 auto 36px">No appointment needed. Just drive in Monday through Saturday, 8AM to 6PM. Or call ahead if you want a detail ready when you arrive.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+        <a href="tel:+15406598885" class="btn btn-primary btn-thunder">Call (540) 659-8885</a>
+        <a href="https://www.google.com/maps/dir//610+Carwash,+389+Garrisonville+Rd,+Stafford,+VA+22554" target="_blank" class="btn btn-outline">Get Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div style="text-align:center" class="reveal">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">Common Questions</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item reveal"><button class="faq-question" aria-expanded="false">What are your hours?<svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">We are open Monday through Saturday from 8:00 AM to 6:00 PM. We are closed on Sundays.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question" aria-expanded="false">Do I need an appointment?<svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">No appointment is needed for any wash service. Just drive in. For larger detail jobs, we recommend calling ahead at (540) 659-8885 so we can reserve the time your vehicle needs.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question" aria-expanded="false">Is your car wash brushless?<svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Yes. Our wash system is completely brushless. No physical brushes touch your vehicle, which means no swirl marks or scratches on your paint. It is safe for all finishes including clear coat, ceramic coatings, and wraps.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question" aria-expanded="false">What payment methods do you accept?<svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">We accept Visa, Mastercard, American Express, Discover, Apple Pay, Android Pay, PayPal, and cash.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question" aria-expanded="false">How long does a full detail take?<svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">A full interior and exterior detail typically takes 2 to 4 hours depending on the size and condition of your vehicle. We recommend calling ahead so we can plan your time slot. Express and full-service washes take 15 to 30 minutes.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question" aria-expanded="false">Do you offer ozone treatments?<svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Yes. Our ozone treatment eliminates odors from smoke, pets, food, and mildew at the molecular level. It is one of the most effective odor removal methods available. Call for pricing and availability.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location bg-section" id="location">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px" class="reveal">
+      <span class="section-label">Find Us</span>
+      <h2 class="section-title">Hours & Location</h2>
+    </div>
+    <div class="location-grid">
+      <div class="location-info reveal">
+        <div class="location-block"><h4>Address</h4><p>389 Garrisonville Rd<br>Stafford, VA 22554</p></div>
+        <div class="location-block"><h4>Phone</h4><p><a href="tel:+15406598885" style="color:var(--white)">(540) 659-8885</a></p></div>
+        <div class="location-block">
+          <h4>Hours</h4>
+          <ul>
+            <li><span>Monday</span><span>8:00 AM - 6:00 PM</span></li>
+            <li><span>Tuesday</span><span>8:00 AM - 6:00 PM</span></li>
+            <li><span>Wednesday</span><span>8:00 AM - 6:00 PM</span></li>
+            <li><span>Thursday</span><span>8:00 AM - 6:00 PM</span></li>
+            <li><span>Friday</span><span>8:00 AM - 6:00 PM</span></li>
+            <li><span>Saturday</span><span>8:00 AM - 6:00 PM</span></li>
+            <li><span>Sunday</span><span>Closed</span></li>
+          </ul>
+        </div>
+        <div class="location-block"><h4>Accepted Payments</h4><p>Visa, Mastercard, Amex, Discover, Apple Pay, Android Pay, PayPal, Cash</p></div>
+      </div>
+      <div class="location-map reveal">
+        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=610+Carwash,389+Garrisonville+Rd,Stafford,VA+22554" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="610 Carwash location map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-title" style="margin-bottom:32px">Questions About<br>Our Services?</h2>
+        <form class="contact-form" onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Message Sent!';this.querySelector('.btn').style.background='#2e7d32'">
+          <div class="contact-row">
+            <label for="contact-name" class="sr-only">Your Name</label>
+            <input id="contact-name" type="text" class="contact-input" placeholder="Your Name" required>
+            <label for="contact-email" class="sr-only">Your Email</label>
+            <input id="contact-email" type="email" class="contact-input" placeholder="Your Email" required>
+          </div>
+          <label for="contact-subject" class="sr-only">Subject</label>
+          <input id="contact-subject" type="text" class="contact-input" placeholder="Subject">
+          <label for="contact-message" class="sr-only">Your Message</label>
+          <textarea id="contact-message" class="contact-textarea" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit" class="btn btn-primary btn-thunder">Send Message</button>
+          <p style="margin-top:8px;font-size:var(--text-xs);color:var(--white-30)">Demo form. Call us at (540) 659-8885 for inquiries.</p>
+        </form>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px;padding-top:60px" class="reveal">
+        <div style="display:flex;align-items:flex-start;gap:16px"><div class="why-icon" style="width:44px;height:44px;flex-shrink:0"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg></div><div><div style="font-size:var(--text-xs);color:var(--white-30);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px">Address</div><div style="font-weight:500">389 Garrisonville Rd, Stafford, VA 22554</div></div></div>
+        <div style="display:flex;align-items:flex-start;gap:16px"><div class="why-icon" style="width:44px;height:44px;flex-shrink:0"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div><div><div style="font-size:var(--text-xs);color:var(--white-30);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px">Phone</div><div style="font-weight:500"><a href="tel:+15406598885" style="color:var(--white)">(540) 659-8885</a></div></div></div>
+        <div style="display:flex;align-items:flex-start;gap:16px"><div class="why-icon" style="width:44px;height:44px;flex-shrink:0"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></div><div><div style="font-size:var(--text-xs);color:var(--white-30);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px">Hours</div><div style="font-weight:500">Mon-Sat: 8AM-6PM<br>Sunday: Closed</div></div></div>
+        <div style="display:flex;align-items:flex-start;gap:16px"><div class="why-icon" style="width:44px;height:44px;flex-shrink:0"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div><div><div style="font-size:var(--text-xs);color:var(--white-30);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px">Website</div><div style="font-weight:500"><a href="https://610carwashva.com/" target="_blank" style="color:var(--blue)">610carwashva.com</a></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">610 <span>Carwash</span></div>
+        <p>Stafford's trusted full-service car wash since 1988. Brushless technology, hand-finished results, and a team that treats your vehicle like their own. Open 6 days a week on Garrisonville Road.</p>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="#about">Our Story</a></li><li><a href="#services">Services</a></li><li><a href="#packages">Packages</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="#services">Car Wash</a></li><li><a href="#services">Interior Detail</a></li><li><a href="#services">Exterior Detail</a></li><li><a href="#services">Ozone Treatment</a></li><li><a href="#services">Tire & Wheel</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+15406598885">(540) 659-8885</a></li><li><a href="#location">389 Garrisonville Rd</a></li><li><a href="#location">Stafford, VA 22554</a></li><li><a href="https://www.facebook.com/610CarWash/" target="_blank">Facebook</a></li><li><a href="https://www.yelp.com/biz/610-car-wash-stafford-4" target="_blank">Yelp</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 610 Carwash. All rights reserved.</span>
+      <span>Crafted by <a href="https://kalnyesgrowth.com" target="_blank" style="color:var(--blue)">KalnyesGrowth</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- POPUP 1: Welcome -->
+<div class="popup-overlay" id="popupWelcome">
+  <div class="popup" role="dialog" aria-modal="true" aria-labelledby="popup-welcome-title">
+    <button class="popup-close" onclick="closePopup('popupWelcome')" aria-label="Close dialog">&times;</button>
+    <span class="section-label">Welcome</span>
+    <h3 id="popup-welcome-title">First Visit?</h3>
+    <p>Mention this site at pickup and get a free tire dressing upgrade on your first wash. We have been making cars shine since 1988.</p>
+    <input type="email" class="popup-input" placeholder="Your email for offers" aria-label="Email for offers">
+    <button class="btn btn-primary btn-thunder" style="width:100%" onclick="closePopup('popupWelcome')">Get My Free Upgrade</button>
+  </div>
+</div>
+
+<!-- POPUP 2: Exit Intent -->
+<div class="popup-overlay" id="popupExit">
+  <div class="popup" role="dialog" aria-modal="true" aria-labelledby="popup-exit-title">
+    <button class="popup-close" onclick="closePopup('popupExit')" aria-label="Close dialog">&times;</button>
+    <span class="section-label">Before You Go</span>
+    <h3 id="popup-exit-title">Your Car Could Look Better</h3>
+    <p>Our full-service wash takes 20 minutes and your vehicle leaves looking showroom ready. No appointment needed. Just drive in.</p>
+    <a href="tel:+15406598885" class="btn btn-primary btn-thunder" style="width:100%;display:flex;justify-content:center">Call Now: (540) 659-8885</a>
+  </div>
+</div>
+
+<!-- POPUP 3: Scroll Review -->
+<div class="popup-overlay" id="popupReview">
+  <div class="popup" role="dialog" aria-modal="true" aria-labelledby="popup-review-title">
+    <button class="popup-close" onclick="closePopup('popupReview')" aria-label="Close dialog">&times;</button>
+    <span class="section-label">Been to 610?</span>
+    <h3 id="popup-review-title">Leave Us a Review</h3>
+    <p>We have been Stafford's car wash since 1988. A quick review helps us keep serving the community. Takes 30 seconds.</p>
+    <a href="https://www.google.com/maps/place/610+Carwash/@38.463,-77.414,17z/" target="_blank" class="btn btn-primary btn-thunder" style="width:100%;display:flex;justify-content:center" onclick="closePopup('popupReview')">Leave a Google Review</a>
+    <p style="margin-top:12px;font-size:var(--text-xs);color:var(--white-30)">Mention this website for 10% off your next detail</p>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
+const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)},{passive:true});
+const reveals=document.querySelectorAll('.reveal');const revealObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});reveals.forEach(el=>revealObs.observe(el));
+document.querySelectorAll('.faq-question').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const answer=item.querySelector('.faq-answer');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-question').setAttribute('aria-expanded','false');i.querySelector('.faq-answer').style.maxHeight=null});if(!isOpen){item.classList.add('open');q.setAttribute('aria-expanded','true');answer.style.maxHeight=answer.scrollHeight+'px'}})});
+const timeline=document.getElementById('timeline');const timelineProgress=document.getElementById('timelineProgress');const steps=document.querySelectorAll('.timeline-step');
+if(timeline&&timelineProgress){const vh=window.innerHeight;const scrollHandler=()=>{const r=timeline.getBoundingClientRect();const progress=Math.max(0,Math.min(1,(vh*.5-r.top)/(r.height-vh*.3)));timelineProgress.style.height=(progress*100)+'%';steps.forEach((step,i)=>{step.classList.toggle('active',progress>=(i+.5)/steps.length)})};const timelineObs=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){window.addEventListener('scroll',scrollHandler,{passive:true});scrollHandler()}else{window.removeEventListener('scroll',scrollHandler)}})},{threshold:0});timelineObs.observe(timeline)}
+let popupShown={welcome:false,exit:false,review:false};function closePopup(id){document.getElementById(id).classList.remove('active');if(id==='popupWelcome'&&!popupShown.review){const p=window.scrollY/(document.body.scrollHeight-window.innerHeight);if(p>.7){document.getElementById('popupReview').classList.add('active');popupShown.review=true}}}
+setTimeout(()=>{if(!popupShown.welcome){document.getElementById('popupWelcome').classList.add('active');popupShown.welcome=true}},4000);
+document.addEventListener('mouseout',e=>{if(e.clientY<5&&!popupShown.exit&&popupShown.welcome){document.getElementById('popupExit').classList.add('active');popupShown.exit=true}});
+window.addEventListener('scroll',()=>{const p=window.scrollY/(document.body.scrollHeight-window.innerHeight);if(p>.7&&!popupShown.review&&popupShown.welcome){document.getElementById('popupReview').classList.add('active');popupShown.review=true}},{passive:true});
+document.querySelectorAll('.popup-overlay').forEach(o=>{o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('active')})});
+if(window.innerWidth<768){const v=document.querySelector('.hero-video');if(v)v.removeAttribute('autoplay')}
+</script>
+</body>
+</html>
