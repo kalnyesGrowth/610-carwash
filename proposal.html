@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>610 Carwash — Digital Growth Proposal | KalnyesGrowth</title>
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css2?family=bricolage-grotesque:wght@400;500;600;700;800&family=archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:hidden}
+:root{
+  --font-heading:'Bricolage Grotesque',sans-serif;
+  --font-body:'Archivo',-apple-system,sans-serif;
+  --blue:#2B7DE9;
+  --blue-light:#4A9BFF;
+  --blue-dim:rgba(43,125,233,0.08);
+  --navy:#0D1117;
+  --navy-2:#111820;
+  --navy-3:#161D27;
+  --navy-4:#1C2533;
+  --green:#2EA043;
+  --green-dim:rgba(46,160,67,0.1);
+  --gold:#D4A017;
+  --gold-dim:rgba(212,160,23,0.1);
+  --white:#F0F6FC;
+  --white-70:rgba(240,246,252,0.7);
+  --white-50:rgba(240,246,252,0.5);
+  --white-30:rgba(240,246,252,0.3);
+  --white-10:rgba(240,246,252,0.1);
+}
+body{font-family:var(--font-body);font-size:16px;line-height:1.7;color:var(--white);background:var(--navy);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-heading);font-weight:700;line-height:1.15}
+a{color:var(--blue);text-decoration:none}
+
+/* HEADER */
+.header{text-align:center;padding:80px 24px 60px;background:var(--navy-2);border-bottom:1px solid var(--white-10)}
+.header-label{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:16px;display:block}
+.header h1{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:16px;color:var(--white)}
+.header h1 span{color:var(--blue)}
+.header p{font-size:18px;color:var(--white-50);max-width:640px;margin:0 auto 32px}
+.header-meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;font-size:13px;color:var(--white-30);letter-spacing:.05em}
+.header-meta span{display:flex;align-items:center;gap:6px}
+
+/* CONTAINER */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* SECTION */
+.section{padding:80px 0}
+.section-label{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;display:block}
+.section-title{font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:16px}
+.section-sub{font-size:17px;color:var(--white-50);max-width:640px;line-height:1.6;margin-bottom:48px}
+
+/* PROBLEMS */
+.problems{background:var(--navy-2);border-top:1px solid var(--white-10);border-bottom:1px solid var(--white-10)}
+.problem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.problem-card{background:var(--navy-3);border:1px solid var(--white-10);border-radius:8px;padding:28px;position:relative;overflow:hidden}
+.problem-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:#E53935}
+.problem-icon{width:36px;height:36px;background:rgba(229,57,53,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.problem-icon svg{width:18px;height:18px;fill:#E53935}
+.problem-card h4{font-size:15px;margin-bottom:6px;color:var(--white)}
+.problem-card p{font-size:13px;color:var(--white-50);line-height:1.6}
+
+/* BUNDLES */
+.bundle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.bundle{background:var(--navy-3);border:1px solid var(--white-10);border-radius:12px;padding:36px 28px;position:relative;transition:transform .3s,box-shadow .3s}
+.bundle:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.bundle.featured{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue),0 8px 40px rgba(43,125,233,.15)}
+.bundle-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--blue);color:var(--white);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 18px;border-radius:100px}
+.bundle-tier{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px;display:block}
+.tier-essential{color:var(--green)}
+.tier-growth{color:var(--blue)}
+.tier-premium{color:var(--gold)}
+.bundle h3{font-size:1.5rem;margin-bottom:8px}
+.bundle-desc{font-size:14px;color:var(--white-50);margin-bottom:24px;line-height:1.5}
+.bundle-price{font-size:2.4rem;font-family:var(--font-heading);font-weight:800;margin-bottom:4px}
+.bundle-price span{font-size:14px;font-weight:400;color:var(--white-50)}
+.bundle-monthly{font-size:14px;color:var(--white-50);margin-bottom:10px}
+.bundle-timeline{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--white-50);margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--white-10)}
+.bundle-timeline svg{flex-shrink:0;fill:var(--white-50)}
+.bundle-includes{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--white-30);margin-bottom:16px}
+.bundle-features{list-style:none;margin-bottom:28px}
+.bundle-features li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--white-70);padding:6px 0;line-height:1.5}
+.bundle-features li svg{flex-shrink:0;margin-top:3px}
+.check{width:16px;height:16px;fill:var(--green)}
+.bundle-cta{display:block;text-align:center;padding:14px 24px;font-family:var(--font-body);font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:6px;border:none;cursor:pointer;transition:all .3s;color:var(--white)}
+.cta-essential{background:transparent;border:1px solid var(--green);color:var(--green)}
+.cta-essential:hover{background:var(--green);color:var(--white)}
+.cta-growth{background:var(--blue);color:var(--white)}
+.cta-growth:hover{background:var(--blue-light)}
+.cta-premium{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+.cta-premium:hover{background:var(--gold);color:var(--navy)}
+
+/* WHAT'S INCLUDED */
+.included{background:var(--navy-2);border-top:1px solid var(--white-10);border-bottom:1px solid var(--white-10)}
+.included-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.included-card{background:var(--navy-3);border:1px solid var(--white-10);border-radius:8px;padding:28px}
+.included-card h4{font-size:15px;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.included-card h4 svg{width:18px;height:18px;fill:var(--blue)}
+.included-card p{font-size:13px;color:var(--white-50);line-height:1.6}
+.included-label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:6px;display:block}
+
+/* HOW IT WORKS */
+.steps{counter-reset:step}
+.step{display:flex;gap:24px;padding:28px 0;border-bottom:1px solid var(--white-10)}
+.step:last-child{border-bottom:none}
+.step-num{counter-increment:step;flex-shrink:0;width:48px;height:48px;background:var(--blue-dim);border:1px solid rgba(43,125,233,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:1.2rem;font-weight:800;color:var(--blue)}
+.step-num::before{content:counter(step)}
+.step-content h4{font-size:16px;margin-bottom:4px}
+.step-content p{font-size:14px;color:var(--white-50);line-height:1.6}
+
+/* ROI */
+.roi-box{background:var(--navy-3);border:1px solid var(--white-10);border-radius:12px;padding:40px;max-width:700px;margin:0 auto}
+.roi-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--white-10)}
+.roi-row:last-child{border-bottom:none;padding-top:16px}
+.roi-row.total{border-top:2px solid var(--blue)}
+.roi-label{font-size:15px;color:var(--white-70)}
+.roi-value{font-size:18px;font-weight:700;font-family:var(--font-heading)}
+.roi-value.green{color:var(--green)}
+
+/* FOOTER */
+.footer{text-align:center;padding:60px 24px;border-top:1px solid var(--white-10)}
+.footer h2{font-size:clamp(1.4rem,3vw,2rem);margin-bottom:12px}
+.footer p{color:var(--white-50);margin-bottom:28px;font-size:16px}
+.footer-cta{display:inline-flex;align-items:center;gap:10px;padding:16px 40px;background:var(--blue);color:var(--white);font-family:var(--font-body);font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:6px;transition:all .3s}
+.footer-cta:hover{background:var(--blue-light);transform:translateY(-2px);box-shadow:0 8px 30px rgba(43,125,233,.25)}
+.footer-info{margin-top:32px;font-size:13px;color:var(--white-30)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .bundle-grid,.included-grid{grid-template-columns:1fr}
+  .bundle.featured{order:-1}
+  .header-meta{flex-direction:column;align-items:center;gap:8px}
+}
+@media(max-width:600px){
+  .problem-grid{grid-template-columns:1fr}
+  .step{flex-direction:column;gap:12px}
+}
+@media(max-width:768px){
+  [style*="grid-template-columns:repeat(4"]{grid-template-columns:repeat(2,1fr)!important}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <span class="header-label">Prepared for 610 Carwash</span>
+  <h1>Your Complete <span>Digital Growth</span> Package</h1>
+  <p>A new website, a customer-facing app, and a membership system that generates recurring revenue. Everything your business needs in one package.</p>
+  <div class="header-meta">
+    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg> June 2026</span>
+    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Prepared by KalnyesGrowth</span>
+    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Stafford, VA</span>
+  </div>
+</div>
+
+<!-- CURRENT PROBLEMS -->
+<section class="problems section">
+  <div class="container">
+    <span class="section-label">Current Situation</span>
+    <h2 class="section-title">What We Found on Your Website</h2>
+    <p class="section-sub">After reviewing 610carwashva.com, we identified several issues that may be turning away potential customers and costing your business money.</p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></div>
+        <h4>Broken Navigation Links</h4>
+        <p>Hours, About, FAQ, and Services links all point to "#" and go nowhere. Customers clicking these leave frustrated.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon"><svg viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg></div>
+        <h4>30+ Unoptimized Images</h4>
+        <p>The photo gallery loads every image at full size with no compression. This makes the site slow, especially on mobile phones.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg></div>
+        <h4>No Pricing or Services Menu</h4>
+        <p>Customers have no way to see what you charge or what services you offer before they drive to your location.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+        <h4>No Customer Reviews Displayed</h4>
+        <p>Only one rotating review is visible. Your Google reviews are not being shown, which means new customers see no social proof.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon"><svg viewBox="0 0 24 24"><path d="M17 1H7c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 18H7V5h10v14z"/></svg></div>
+        <h4>Not Mobile Friendly</h4>
+        <p>The site was built for desktop screens. On a phone, elements overlap, text is hard to read, and images don't resize properly.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div>
+        <h4>No Membership Program Online</h4>
+        <p>Your membership plan has no sign-up page, no pricing display, and no way for customers to enroll online. You're leaving recurring revenue on the table.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUNDLES -->
+<section class="section">
+  <div class="container">
+    <span class="section-label">Our Solution</span>
+    <h2 class="section-title">Choose Your Growth Package</h2>
+    <p class="section-sub">Every package includes a complete website redesign, a customer-facing app, and a built-in membership system. Pick the level that fits your goals.</p>
+
+    <div class="bundle-grid">
+
+      <!-- ESSENTIAL -->
+      <div class="bundle">
+        <span class="bundle-tier tier-essential">Essential</span>
+        <h3>Website + App + Memberships</h3>
+        <p class="bundle-desc">Everything you need to get online properly. A modern website, a mobile app your customers can install, and a membership sign-up system.</p>
+        <div class="bundle-price" style="color:var(--green)">$3,500 <span>one-time</span></div>
+        <div class="bundle-monthly">+ $300/mo for hosting, updates, and support</div>
+        <div class="bundle-timeline"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg> Estimated delivery: 2-3 weeks</div>
+        <span class="bundle-includes">Everything included:</span>
+        <ul class="bundle-features">
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Full website redesign (mobile optimized)</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Progressive Web App (installs on any phone)</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Membership sign-up with 3 tiers</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Stripe recurring billing (automatic monthly charges)</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>QR code member check-in</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Google reviews displayed on site</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Service menu with pricing</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Google Maps and business hours</li>
+        </ul>
+        <a href="#contact" class="bundle-cta cta-essential">Get Started</a>
+      </div>
+
+      <!-- GROWTH -->
+      <div class="bundle featured">
+        <div class="bundle-badge">Most Popular</div>
+        <span class="bundle-tier tier-growth">Growth</span>
+        <h3>Website + App + Memberships + Loyalty</h3>
+        <p class="bundle-desc">Everything in Essential, plus a loyalty rewards program and push notifications to keep your customers coming back.</p>
+        <div class="bundle-price" style="color:var(--blue)">$5,000 <span>one-time</span></div>
+        <div class="bundle-monthly">+ $400/mo for hosting, updates, and support</div>
+        <div class="bundle-timeline"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg> Estimated delivery: 4-5 weeks</div>
+        <span class="bundle-includes">Everything in Essential, plus:</span>
+        <ul class="bundle-features">
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Loyalty points system (earn points per wash)</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Push notifications for deals and promos</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Customer dashboard (manage plan, view history)</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Admin dashboard (view members, revenue, analytics)</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Automated email receipts and reminders</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>SEO optimization (show up higher on Google)</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Photo gallery with before/after showcase</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Priority support (same-day response)</li>
+        </ul>
+        <a href="#contact" class="bundle-cta cta-growth">Get Started</a>
+      </div>
+
+      <!-- PREMIUM -->
+      <div class="bundle">
+        <span class="bundle-tier tier-premium">Premium</span>
+        <h3>Website + Native App + Memberships + Full System</h3>
+        <p class="bundle-desc">The complete package. A native app on the App Store and Google Play, plus advanced features like referral programs and gift cards.</p>
+        <div class="bundle-price" style="color:var(--gold)">$12,000 <span>one-time</span></div>
+        <div class="bundle-monthly">+ $700/mo for hosting, updates, and support</div>
+        <div class="bundle-timeline"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg> Estimated delivery: 8-10 weeks</div>
+        <span class="bundle-includes">Everything in Growth, plus:</span>
+        <ul class="bundle-features">
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Native app on Apple App Store and Google Play</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Referral program ("Refer a friend, get a free wash")</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Digital gift cards (buy and send via app)</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>License plate storage for fast check-in</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Branded app icon on customer phones</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Advanced analytics and revenue reports</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Custom branding throughout the entire app</li>
+          <li><svg class="check" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Dedicated account manager</li>
+        </ul>
+        <a href="#contact" class="bundle-cta cta-premium">Get Started</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S IN EVERY PACKAGE -->
+<section class="included section">
+  <div class="container">
+    <span class="section-label">Every Package Includes</span>
+    <h2 class="section-title">Three Systems, One Price</h2>
+    <p class="section-sub">No matter which plan you choose, you get all three core systems working together. Here's what each one does for your business.</p>
+
+    <div class="included-grid">
+      <div class="included-card">
+        <span class="included-label">System 1</span>
+        <h4><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/></svg> Professional Website</h4>
+        <p>A fast, modern website built specifically for 610 Carwash. Mobile-optimized, SEO-ready, with your real photos, services, pricing, reviews, and business hours. Replaces your current AMP-hosted site completely.</p>
+      </div>
+      <div class="included-card">
+        <span class="included-label">System 2</span>
+        <h4><svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 18H7V5h10v14z"/></svg> Customer App</h4>
+        <p>Your customers install it on their phone in one tap. They can view their membership status, check loyalty points, receive push notifications for deals, and show their QR code when they arrive for a wash.</p>
+      </div>
+      <div class="included-card">
+        <span class="included-label">System 3</span>
+        <h4><svg viewBox="0 0 24 24"><path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg> Membership System</h4>
+        <p>Customers sign up online, pick their plan, and get charged automatically every month through Stripe. You get a dashboard to see who's a member, track revenue, and manage subscriptions. No manual work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <div class="container">
+    <span class="section-label">The Process</span>
+    <h2 class="section-title">How We Get You Live</h2>
+    <p class="section-sub">From start to launch, here's exactly what happens. No surprises, no hidden steps.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num"></div>
+        <div class="step-content">
+          <h4>Discovery Call (30 min)</h4>
+          <p>We sit down and go through your membership tiers, services, pricing, and goals. You tell us exactly what you want. We take notes and build a plan.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div class="step-content">
+          <h4>Design and Build (1-3 weeks)</h4>
+          <p>We build your website, app, and membership system. You get a preview link to review everything before it goes live. We make changes until you're 100% happy.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div class="step-content">
+          <h4>Review and Revisions</h4>
+          <p>You review the final product. Want to change the colors? Move a section? Add a service? We handle it. Unlimited revisions until you approve.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div class="step-content">
+          <h4>Launch Day</h4>
+          <p>We point your domain to the new site, set up Stripe payments, and go live. Your membership system starts accepting sign-ups the same day. We handle all the technical setup.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div class="step-content">
+          <h4>Ongoing Support</h4>
+          <p>After launch, we handle updates, fixes, and changes. Need to add a new service? Change your membership pricing? Send a promo notification? Just message us.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI -->
+<section class="included section">
+  <div class="container" style="text-align:center">
+    <span class="section-label">The Numbers</span>
+    <h2 class="section-title">What 100 Members Looks Like</h2>
+    <p class="section-sub" style="margin:0 auto 40px">Here's a realistic look at what a membership program generates with just 100 sign-ups at an average of $35/month.</p>
+
+    <div class="roi-box">
+      <div class="roi-row">
+        <span class="roi-label">100 members x $35/mo average</span>
+        <span class="roi-value">$3,500/mo</span>
+      </div>
+      <div class="roi-row">
+        <span class="roi-label">Annual recurring revenue</span>
+        <span class="roi-value">$42,000/yr</span>
+      </div>
+      <div class="roi-row">
+        <span class="roi-label">Stripe processing fee (2.9% + 30c)</span>
+        <span class="roi-value" style="color:#E53935">-$1,375/yr</span>
+      </div>
+      <div class="roi-row">
+        <span class="roi-label">Your monthly maintenance fee</span>
+        <span class="roi-value" style="color:#E53935">-$4,800/yr</span>
+      </div>
+      <div class="roi-row total">
+        <span class="roi-label" style="font-weight:700;color:var(--white)">Net new revenue (year 1)</span>
+        <span class="roi-value green">$35,825/yr</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUSINESS IMPACT -->
+<section class="section">
+  <div class="container">
+    <span class="section-label">The Big Picture</span>
+    <h2 class="section-title">What This Means for 610 Carwash</h2>
+    <p class="section-sub">This isn't just a website. Here's how each piece of this system directly impacts your bottom line and daily operations.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-bottom:48px">
+
+      <div style="background:var(--navy-3);border:1px solid var(--white-10);border-radius:12px;padding:32px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--green),var(--blue))"></div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:16px">Without Our System</div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;align-items:flex-start;gap:10px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#E53935" style="flex-shrink:0;margin-top:2px"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+            <span style="font-size:14px;color:var(--white-70)">Customers search "car wash near me," find competitors with better websites first</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#E53935" style="flex-shrink:0;margin-top:2px"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+            <span style="font-size:14px;color:var(--white-70)">Revenue depends entirely on walk-ins and weather. Rain = no income</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#E53935" style="flex-shrink:0;margin-top:2px"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+            <span style="font-size:14px;color:var(--white-70)">No way to contact past customers with deals or bring them back</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#E53935" style="flex-shrink:0;margin-top:2px"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+            <span style="font-size:14px;color:var(--white-70)">Paying $300-$500/mo for a template website with broken links</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#E53935" style="flex-shrink:0;margin-top:2px"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+            <span style="font-size:14px;color:var(--white-70)">Membership program exists but customers can't find it or sign up online</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--navy-3);border:1px solid var(--white-10);border-radius:12px;padding:32px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--blue),var(--blue-light))"></div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:16px">With Our System</div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;align-items:flex-start;gap:10px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--green)" style="flex-shrink:0;margin-top:2px"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span style="font-size:14px;color:var(--white-70)">SEO-optimized site ranks higher on Google. More searches = more customers</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--green)" style="flex-shrink:0;margin-top:2px"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span style="font-size:14px;color:var(--white-70)">Membership revenue comes in every month, rain or shine. Predictable cash flow</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--green)" style="flex-shrink:0;margin-top:2px"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span style="font-size:14px;color:var(--white-70)">Push notifications bring customers back. "20% off detailing this weekend" sent to every member</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--green)" style="flex-shrink:0;margin-top:2px"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span style="font-size:14px;color:var(--white-70)">Admin dashboard shows exactly how many members you have, revenue this month, and growth trends</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--green)" style="flex-shrink:0;margin-top:2px"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span style="font-size:14px;color:var(--white-70)">Customers sign up for memberships from their phone. No paperwork, no manual tracking</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+      <div style="background:var(--navy-3);border:1px solid var(--white-10);border-radius:10px;padding:28px 20px;text-align:center">
+        <div style="font-family:var(--font-heading);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;color:var(--green);margin-bottom:4px">$35K+</div>
+        <div style="font-size:13px;color:var(--white-50)">New recurring revenue per year with just 100 members</div>
+      </div>
+      <div style="background:var(--navy-3);border:1px solid var(--white-10);border-radius:10px;padding:28px 20px;text-align:center">
+        <div style="font-family:var(--font-heading);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;color:var(--blue);margin-bottom:4px">24/7</div>
+        <div style="font-size:13px;color:var(--white-50)">Your membership system accepts sign-ups while you sleep</div>
+      </div>
+      <div style="background:var(--navy-3);border:1px solid var(--white-10);border-radius:10px;padding:28px 20px;text-align:center">
+        <div style="font-family:var(--font-heading);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;color:var(--blue-light);margin-bottom:4px">3x</div>
+        <div style="font-size:13px;color:var(--white-50)">Members visit 3x more often than one-time customers</div>
+      </div>
+      <div style="background:var(--navy-3);border:1px solid var(--white-10);border-radius:10px;padding:28px 20px;text-align:center">
+        <div style="font-family:var(--font-heading);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;color:var(--gold);margin-bottom:4px">$0</div>
+        <div style="font-size:13px;color:var(--white-50)">No more paying for a broken template site that doesn't convert</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- QUESTIONS CTA -->
+<section class="section" style="padding:60px 0 0">
+  <div class="container" style="text-align:center">
+    <div style="background:var(--navy-3);border:1px solid var(--white-10);border-radius:12px;padding:48px 32px;max-width:700px;margin:0 auto">
+      <div style="width:56px;height:56px;background:var(--blue-dim);border:1px solid rgba(43,125,233,.2);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--blue)"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/></svg>
+      </div>
+      <h2 style="font-family:var(--font-heading);font-size:clamp(1.4rem,3vw,1.8rem);margin-bottom:12px">Have Questions?</h2>
+      <p style="color:var(--white-50);font-size:16px;max-width:480px;margin:0 auto 28px;line-height:1.6">Not sure which package is right for you? Want to see the demo site we already built? Book a free 15-minute call and we'll walk you through everything.</p>
+      <a href="https://calendly.com/kalnyesgrowth/610-carwash-proposal-review?month=2026-06" target="_blank" class="footer-cta" style="margin-bottom:16px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+        Book a Free Call
+      </a>
+      <p style="font-size:13px;color:var(--white-30)">15 minutes. No commitment. We'll answer any questions you have.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="contact">
+  <p style="color:var(--white-50);font-size:14px;margin-bottom:12px">Or reach us directly:</p>
+  <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:24px">
+    <a href="tel:+15407838835" style="display:flex;align-items:center;gap:8px;color:var(--white-70);font-size:14px;font-weight:600">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--blue)"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+      (540) 783-8835
+    </a>
+    <a href="mailto:jessyt440@gmail.com" style="display:flex;align-items:center;gap:8px;color:var(--white-70);font-size:14px;font-weight:600">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--blue)"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      jessyt440@gmail.com
+    </a>
+  </div>
+  <div class="footer-info">
+    <p>KalnyesGrowth Web Design · Stafford, VA · kalnyesgrowth.com</p>
+  </div>
+</footer>
+
+</body>
+</html>
