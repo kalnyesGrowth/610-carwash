@@ -138,7 +138,10 @@ a{color:var(--blue);text-decoration:none}
 }
 @media(max-width:768px){
   [style*="grid-template-columns:repeat(4"]{grid-template-columns:repeat(2,1fr)!important}
+  [style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr!important}
   [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
+  [style*="order:0"]{order:1!important}
+  [style*="order:1"]{order:0!important}
 }
 </style>
 </head>
@@ -195,6 +198,111 @@ a{color:var(--blue);text-decoration:none}
         <p>Your membership plan has no sign-up page, no pricing display, and no way for customers to enroll online. You're leaving recurring revenue on the table.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- VEHICLE TRACKING SOLUTION -->
+<section class="section">
+  <div class="container">
+    <span class="section-label">We Heard You</span>
+    <h2 class="section-title">You Told Us Members Are Bringing Extra Cars. Here's How We Fix That.</h2>
+    <p class="section-sub">You mentioned that subscription members are bringing vehicles that aren't on their plan, and without a camera system there's no way to catch it. Camera systems cost $5,000-$15,000 to install plus $200-$500/mo to maintain. Our solution costs you nothing extra. It's built into the app.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin-bottom:48px">
+      <div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:16px">Step 1: Members Register Their Plates</div>
+        <p style="font-size:15px;color:var(--white-70);line-height:1.7;margin-bottom:16px">When a customer signs up for a membership, the app requires them to enter their license plate number. Each plan has a vehicle limit. Basic = 1 car. Premium = 2 cars. They can manage their vehicles anytime, but they can't exceed their plan's limit.</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:8px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--green)" style="flex-shrink:0"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span style="font-size:13px;color:var(--white-50)">Plate number required at sign-up</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--green)" style="flex-shrink:0"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span style="font-size:13px;color:var(--white-50)">Vehicle limit enforced per plan tier</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--green)" style="flex-shrink:0"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span style="font-size:13px;color:var(--white-50)">Members manage vehicles in the app</span>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center">
+        <img src="my-vehicles.png" alt="Member vehicle registration screen" style="max-width:320px;width:100%;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,.4)">
+        <p style="font-size:12px;color:var(--white-30);margin-top:10px">What the member sees in the app</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin-bottom:48px">
+      <div style="text-align:center;order:0">
+        <img src="staff-checkin.png" alt="Staff QR check-in tablet" style="max-width:340px;width:100%;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,.4)">
+        <p style="font-size:12px;color:var(--white-30);margin-top:10px">What your staff sees on the tablet</p>
+      </div>
+      <div style="order:1">
+        <div style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:16px">Step 2: Staff Scans the QR Code</div>
+        <p style="font-size:15px;color:var(--white-70);line-height:1.7;margin-bottom:16px">Your team keeps a tablet at the entrance. When a member arrives, they show their QR code. Staff scans it, and the screen instantly shows: the member's name, their registered plate(s), whether the car in front of them matches, and how many washes they've used this month.</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:8px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--blue)" style="flex-shrink:0"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span style="font-size:13px;color:var(--white-50)">3-second visual plate check</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--blue)" style="flex-shrink:0"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span style="font-size:13px;color:var(--white-50)">Green MATCH badge = wave them through</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--blue)" style="flex-shrink:0"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span style="font-size:13px;color:var(--white-50)">Monthly wash counter prevents overuse</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin-bottom:48px">
+      <div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E65100;margin-bottom:16px">Step 3: Unregistered Cars Get Flagged</div>
+        <p style="font-size:15px;color:var(--white-70);line-height:1.7;margin-bottom:16px">If the car at the wash doesn't match any of the member's registered plates, the system flags it immediately. Your staff sees a clear warning with two options: charge a one-time wash at full price, or let the member add the vehicle (if their plan allows it).</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:8px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#E65100" style="flex-shrink:0"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+            <span style="font-size:13px;color:var(--white-50)">Instant flag when plate doesn't match</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#E65100" style="flex-shrink:0"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+            <span style="font-size:13px;color:var(--white-50)">Charge full price or let them register</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#E65100" style="flex-shrink:0"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+            <span style="font-size:13px;color:var(--white-50)">Every incident logged for your records</span>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center">
+        <img src="flagged-vehicle.png" alt="Unregistered vehicle alert" style="max-width:340px;width:100%;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,.4)">
+        <p style="font-size:12px;color:var(--white-30);margin-top:10px">What your staff sees when a car doesn't match</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:32px">
+      <div style="background:var(--navy-3);border:1px solid var(--white-10);border-radius:10px;padding:24px 20px;text-align:center">
+        <div style="font-family:var(--font-heading);font-size:clamp(1.6rem,2.5vw,2rem);font-weight:800;color:var(--green);margin-bottom:6px">$0</div>
+        <div style="font-size:13px;color:var(--white-50)">No camera hardware to buy or maintain</div>
+      </div>
+      <div style="background:var(--navy-3);border:1px solid var(--white-10);border-radius:10px;padding:24px 20px;text-align:center">
+        <div style="font-family:var(--font-heading);font-size:clamp(1.6rem,2.5vw,2rem);font-weight:800;color:var(--blue);margin-bottom:6px">3 sec</div>
+        <div style="font-size:13px;color:var(--white-50)">Per check-in. Scan, verify, wave through.</div>
+      </div>
+      <div style="background:var(--navy-3);border:1px solid var(--white-10);border-radius:10px;padding:24px 20px;text-align:center">
+        <div style="font-family:var(--font-heading);font-size:clamp(1.6rem,2.5vw,2rem);font-weight:800;color:var(--gold);margin-bottom:6px">100%</div>
+        <div style="font-size:13px;color:var(--white-50)">Every wash logged. No more guessing.</div>
+      </div>
+    </div>
+
+    <div style="background:rgba(46,125,50,.06);border:1px solid rgba(46,125,50,.15);border-radius:10px;padding:20px 24px;display:flex;align-items:flex-start;gap:12px;max-width:720px;margin:0 auto">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--green)" style="flex-shrink:0;margin-top:2px"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+      <p style="font-size:14px;color:var(--white-60);line-height:1.6;margin:0"><strong style="color:var(--white)">This feature is included in every package.</strong> No extra charge. No hardware to buy. Your staff just needs a tablet ($150 one-time), and the system does the rest. If even 5 members were sneaking in extra cars per month at $15/wash, that's $75/mo in recovered revenue you were losing.</p>
+    </div>
+
   </div>
 </section>
 
