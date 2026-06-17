@@ -8,7 +8,7 @@
 <meta property="og:title" content="610 Carwash | Stafford, VA Since 1988">
 <meta property="og:description" content="Full-service car wash and detailing. Preserving your automotive investment since 1988. 389 Garrisonville Rd, Stafford VA.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://images.pexels.com/photos/210627/pexels-photo-210627.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<meta property="og:image" content="images/website-11.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <link rel="icon" href="data:,">
@@ -64,10 +64,9 @@ section{padding:100px 0;position:relative}
 
 /* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 0;transition:all .4s;background:transparent}
-.nav.scrolled{background:rgba(13,17,23,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:12px 0;box-shadow:0 2px 40px rgba(0,0,0,.5)}
+.nav.scrolled{background:rgba(17,17,22,.95);padding:12px 0;box-shadow:0 2px 40px rgba(0,0,0,.5)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 24px}
-.nav-logo{font-family:var(--font-heading);font-size:var(--text-2xl);font-weight:800;color:var(--blue);letter-spacing:.02em}
-.nav-logo span{color:var(--white);font-weight:400;font-size:var(--text-lg)}
+.nav-logo{display:flex;align-items:center}
 .nav-links{display:flex;align-items:center;gap:32px;list-style:none}
 .nav-links a{font-size:var(--text-sm);font-weight:600;color:var(--white-50);letter-spacing:.06em;text-transform:uppercase;transition:color .3s}
 .nav-links a:hover{color:var(--blue)}
@@ -82,15 +81,17 @@ section{padding:100px 0;position:relative}
 
 /* HERO */
 .hero{position:relative;height:100vh;min-height:700px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:0}
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
-.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,17,23,.35) 0%,rgba(13,17,23,.6) 50%,rgba(13,17,23,.95) 100%);z-index:1}
-.hero-content{position:relative;z-index:2;max-width:840px;padding:0 24px}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border:1px solid rgba(43,125,233,.25);border-radius:100px;font-size:var(--text-xs);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:28px;backdrop-filter:blur(10px);background:rgba(43,125,233,.06)}
+.hero-video-wrap{position:absolute;inset:0;z-index:0}
+.hero-poster{position:absolute;inset:0;background:url('poster.jpg') center/cover no-repeat;z-index:0}
+.hero-video-wrap canvas{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:1}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,17,23,.6) 0%,rgba(13,17,23,.75) 50%,rgba(13,17,23,.95) 100%);z-index:2}
+.hero-content{position:relative;z-index:3;max-width:840px;padding:0 24px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border-radius:100px;font-size:var(--text-xs);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:28px;background:rgba(43,125,233,.1)}
 .hero h1{margin-bottom:24px;text-shadow:0 4px 40px rgba(0,0,0,.5)}
 .hero h1 em{font-style:italic;color:var(--blue)}
 .hero-desc{font-size:var(--text-lg);color:var(--white-50);margin-bottom:40px;max-width:580px;margin-left:auto;margin-right:auto}
 .hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.hero-scroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--white-30);font-size:var(--text-xs);letter-spacing:.1em;text-transform:uppercase;animation:scrollBounce 2s infinite}
+.hero-scroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--white-30);font-size:var(--text-xs);letter-spacing:.1em;text-transform:uppercase;animation:scrollBounce 2s infinite}
 @keyframes scrollBounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
 .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--blue),transparent)}
 
@@ -101,9 +102,8 @@ section{padding:100px 0;position:relative}
 .about-img img{width:100%;height:500px;object-fit:cover}
 .about-img-badge{position:absolute;bottom:24px;left:24px;background:var(--blue);color:var(--white);padding:12px 20px;font-weight:700;font-size:var(--text-sm);letter-spacing:.06em;border-radius:4px}
 .about-text p{color:var(--white-50);margin-bottom:16px}
-.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px;padding-top:36px;border-top:1px solid var(--white-10)}
-.about-stat-num{font-family:var(--font-heading);font-size:var(--text-3xl);font-weight:700;color:var(--blue)}
-.about-stat-label{font-size:var(--text-xs);color:var(--white-30);text-transform:uppercase;letter-spacing:.1em;margin-top:4px}
+.nav-logo img{height:40px;width:auto}
+.hero-logo{max-width:340px;width:100%;height:auto;margin:0 auto 24px;display:block;filter:drop-shadow(0 4px 20px rgba(0,0,0,.5))}
 
 /* SERVICES */
 .services{background:var(--navy)}
@@ -118,7 +118,7 @@ section{padding:100px 0;position:relative}
 .service-card-desc{font-size:var(--text-sm);color:var(--white-50);line-height:1.6}
 
 /* PACKAGES */
-.packages{background-image:url('https://images.pexels.com/photos/29504461/pexels-photo-29504461.jpeg?auto=compress&cs=tinysrgb&w=1920')}
+.packages{background-image:url('images/website-7.jpg')}
 .packages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .package-card{background:rgba(22,29,39,.9);backdrop-filter:blur(10px);border:1px solid var(--white-10);border-radius:6px;padding:36px;text-align:center;transition:border-color .3s,transform .3s}
 .package-card:hover{border-color:rgba(43,125,233,.3);transform:translateY(-4px)}
@@ -153,7 +153,7 @@ section{padding:100px 0;position:relative}
 .gallery-item:first-child{grid-column:span 2;grid-row:span 2}
 
 /* REVIEWS */
-.reviews{background-image:url('https://images.pexels.com/photos/4870671/pexels-photo-4870671.jpeg?auto=compress&cs=tinysrgb&w=1920');text-align:center}
+.reviews{background-image:url('images/website-1.jpg');text-align:center}
 .reviews-rating{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:12px}
 .reviews-stars{color:var(--blue);font-size:var(--text-2xl);letter-spacing:4px}
 .reviews-count{font-size:var(--text-sm);color:var(--white-30)}
@@ -169,18 +169,23 @@ section{padding:100px 0;position:relative}
 .review-google-cta p{font-size:var(--text-sm);color:var(--white-50)}
 .review-google-cta strong{color:var(--blue);font-weight:600}
 
-/* PROCESS TIMELINE */
-.process{background-image:url('https://images.pexels.com/photos/29504462/pexels-photo-29504462.jpeg?auto=compress&cs=tinysrgb&w=1920')}
+/* PROCESS TIMELINE — Custom Car + Bubble Trail */
+.process{background-image:url('images/website-5.jpg')}
 .timeline{position:relative;max-width:700px;margin:60px auto 0}
-.timeline-line{position:absolute;left:24px;top:0;width:2px;height:100%;background:var(--white-10)}
-.timeline-progress{position:absolute;left:24px;top:0;width:2px;height:0;background:var(--blue);transition:height .1s linear}
+.timeline-line{position:absolute;left:24px;top:0;width:4px;height:100%;background:var(--white-10);border-radius:2px}
+.timeline-progress{position:absolute;left:24px;top:0;width:4px;height:0;border-radius:2px;transition:height .1s linear;background:transparent}
+.timeline-bubbles{position:absolute;left:24px;top:0;width:4px;height:0;border-radius:2px;overflow:visible}
+.timeline-car{position:absolute;left:26px;width:50px;height:50px;transform:translate(-50%,-25px) rotate(90deg);z-index:10;transition:top .1s linear;filter:drop-shadow(0 2px 8px rgba(0,0,0,.6))}
 .timeline-step{position:relative;padding-left:72px;padding-bottom:48px;opacity:.3;transform:translateX(-10px);transition:all .6s cubic-bezier(.25,.46,.45,.94)}
 .timeline-step.active{opacity:1;transform:translateX(0)}
-.timeline-dot{position:absolute;left:14px;top:4px;width:22px;height:22px;border-radius:50%;background:var(--navy);border:2px solid var(--white-10);transition:all .4s}
-.timeline-step.active .timeline-dot{background:var(--blue);border-color:var(--blue);box-shadow:0 0 20px var(--blue-glow)}
+.timeline-dot{position:absolute;left:12px;top:4px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;transition:all .4s}
+.timeline-dot svg{width:28px;height:28px;opacity:.3;transition:opacity .4s}
+.timeline-step.active .timeline-dot svg{opacity:1;filter:drop-shadow(0 0 8px rgba(0,0,0,.5))}
 .timeline-num{font-family:var(--font-heading);font-size:var(--text-xs);font-weight:700;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
 .timeline-title{font-family:var(--font-heading);font-size:var(--text-xl);font-weight:600;margin-bottom:8px}
 .timeline-desc{font-size:var(--text-sm);color:var(--white-50);line-height:1.6}
+.bubble{position:absolute;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.4),rgba(43,125,233,.15));border:1px solid rgba(255,255,255,.2);animation:bubbleFloat 2s ease-in-out infinite alternate;pointer-events:none}
+@keyframes bubbleFloat{0%{transform:translateX(0)}100%{transform:translateX(var(--drift,3px))}}
 
 /* CTA */
 .cta-section{background:var(--navy);text-align:center;padding:80px 0}
@@ -196,7 +201,7 @@ section{padding:100px 0;position:relative}
 .faq-answer-inner{padding:0 0 20px;font-size:var(--text-sm);color:var(--white-50);line-height:1.7}
 
 /* LOCATION */
-.location{background-image:url('https://images.pexels.com/photos/20381587/pexels-photo-20381587.jpeg?auto=compress&cs=tinysrgb&w=1920')}
+.location{background-image:url('images/website-10.jpg')}
 .location-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
 .location-info{display:flex;flex-direction:column;gap:32px}
 .location-block h4{font-size:var(--text-lg);margin-bottom:12px;color:var(--blue)}
@@ -266,14 +271,12 @@ section{padding:100px 0;position:relative}
   .footer-bottom{flex-direction:column;gap:12px;text-align:center}
   .hero-btns{flex-direction:column;align-items:center}
   .btn{padding:14px 28px}
-  .about-stats{grid-template-columns:repeat(3,1fr);gap:16px}
   .contact-row{grid-template-columns:1fr}
   .bg-section{background-attachment:scroll}
   .popup{padding:32px 24px}
 }
 @media(prefers-reduced-motion:reduce){.bg-section{background-attachment:scroll}.reveal{transition:none}}
 @media(max-width:480px){
-  .about-stats{grid-template-columns:1fr;text-align:center}
   .gallery-grid{grid-template-columns:1fr;grid-template-rows:repeat(4,200px)}
 }
 </style>
@@ -283,7 +286,7 @@ section{padding:100px 0;position:relative}
   "@context":"https://schema.org",
   "@type":"AutoWash",
   "name":"610 Carwash",
-  "image":"https://images.pexels.com/photos/210627/pexels-photo-210627.jpeg?auto=compress&cs=tinysrgb&w=1260",
+  "image":"images/website-11.jpg",
   "address":{"@type":"PostalAddress","streetAddress":"389 Garrisonville Rd","addressLocality":"Stafford","addressRegion":"VA","postalCode":"22554","addressCountry":"US"},
   "telephone":"+1-540-659-8885",
   "url":"https://610carwashva.com/",
@@ -306,7 +309,7 @@ section{padding:100px 0;position:relative}
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo">610 <span>Carwash</span></a>
+    <a href="#" class="nav-logo"><img src="logo.png" alt="610 Car Wash" loading="eager"></a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
@@ -335,19 +338,23 @@ section{padding:100px 0;position:relative}
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <video class="hero-video" autoplay muted loop playsinline aria-hidden="true" poster="https://images.pexels.com/photos/210627/pexels-photo-210627.jpeg?auto=compress&cs=tinysrgb&w=1920">
-    <source src="https://videos.pexels.com/video-files/4863282/4863282-hd_1920_1080_30fps.mp4" type="video/mp4">
-  </video>
+  <div class="hero-video-wrap">
+    <div class="hero-poster"></div>
+    <canvas id="heroCanvas"></canvas>
+    <video id="heroVideo" autoplay muted loop playsinline style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none">
+      <source src="hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+  </div>
   <div class="hero-content">
     <div class="hero-badge">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       Stafford's Trusted Car Wash Since 1988
     </div>
-    <h1>Your Car<br>Deserves <em>Better.</em></h1>
+    <h1><img src="logo.png" alt="610 Car Wash" class="hero-logo"></h1>
     <p class="hero-desc">Full-service car wash and detailing on Route 610. Brushless technology, hand-finished results. Preserving your automotive investment for over 35 years.</p>
     <div class="hero-btns">
-      <a href="tel:+15406598885" class="btn btn-primary btn-thunder">Call (540) 659-8885</a>
-      <a href="#services" class="btn btn-outline">View Services</a>
+      <a href="tel:+15406598885" class="btn btn-outline btn-thunder">Call (540) 659-8885</a>
     </div>
   </div>
   <div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
@@ -358,7 +365,7 @@ section{padding:100px 0;position:relative}
   <div class="container">
     <div class="about-grid">
       <div class="about-img reveal">
-        <img src="https://images.pexels.com/photos/6873008/pexels-photo-6873008.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Car being hand washed at professional wash bay" loading="lazy">
+        <img src="images/website-9.jpg" alt="610 Car Wash building exterior with blue Corvette" loading="lazy">
         <div class="about-img-badge">Since 1988</div>
       </div>
       <div class="about-text reveal">
@@ -367,11 +374,6 @@ section{padding:100px 0;position:relative}
         <div class="blue-line"></div>
         <p>610 Carwash has been a fixture on Garrisonville Road since 1988. For over 35 years, we have been the car wash Stafford trusts. We are not a chain. We are not a franchise. We are a locally owned business that takes pride in every vehicle that rolls through our bay.</p>
         <p>Our brushless wash technology is gentle on your paint while tough on dirt. Every wash is finished by hand. We treat your vehicle the way we treat our own. From a quick exterior rinse to a full interior detail, we do it right every time.</p>
-        <div class="about-stats">
-          <div><div class="about-stat-num">35+</div><div class="about-stat-label">Years in Business</div></div>
-          <div><div class="about-stat-num">700+</div><div class="about-stat-label">Reviews</div></div>
-          <div><div class="about-stat-num">6</div><div class="about-stat-label">Days a Week</div></div>
-        </div>
       </div>
     </div>
   </div>
@@ -387,42 +389,42 @@ section{padding:100px 0;position:relative}
     </div>
     <div class="services-grid">
       <div class="service-card reveal">
-        <div class="service-card-img"><img src="https://images.pexels.com/photos/4870739/pexels-photo-4870739.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Car covered in soap suds during brushless wash" loading="lazy"></div>
+        <div class="service-card-img"><img src="images/website-12.jpg" alt="Chevy Tahoe going through 610 Car Wash brushless tunnel with soap" loading="lazy"></div>
         <div class="service-card-body">
           <div class="service-card-name">Brushless Car Wash</div>
           <div class="service-card-desc">Our signature brushless wash system is gentle on your finish and tough on grime. No scratches, no swirl marks. Just a clean, protected vehicle.</div>
         </div>
       </div>
       <div class="service-card reveal">
-        <div class="service-card-img"><img src="https://images.pexels.com/photos/17029940/pexels-photo-17029940.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Interior car detailing with cloth" loading="lazy"></div>
+        <div class="service-card-img"><img src="images/website-16.jpg" alt="Interior detailing with microfiber cloth at 610 Car Wash" loading="lazy"></div>
         <div class="service-card-body">
           <div class="service-card-name">Interior Detailing</div>
           <div class="service-card-desc">Deep cleaning, shampooing, and conditioning for your cabin. We restore seats, carpets, dashboard, and every surface until it looks and smells like new.</div>
         </div>
       </div>
       <div class="service-card reveal">
-        <div class="service-card-img"><img src="https://images.pexels.com/photos/37809565/pexels-photo-37809565.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Exterior polishing and waxing" loading="lazy"></div>
+        <div class="service-card-img"><img src="images/website-11.jpg" alt="Blue Corvette freshly washed in front of 610 Car Wash building" loading="lazy"></div>
         <div class="service-card-body">
           <div class="service-card-name">Exterior Detailing</div>
           <div class="service-card-desc">Hand wash, clay bar, polish, and wax. We bring back the factory shine. Bug removal, tar removal, and paint protection included in every detail.</div>
         </div>
       </div>
       <div class="service-card reveal">
-        <div class="service-card-img"><img src="https://images.pexels.com/photos/17623850/pexels-photo-17623850.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wheel cleaning with professional products" loading="lazy"></div>
+        <div class="service-card-img"><img src="images/brochure-14.jpeg" alt="Clean Honda wheel after 610 Car Wash tire detailing" loading="lazy"></div>
         <div class="service-card-body">
           <div class="service-card-name">Tire & Wheel Cleaning</div>
           <div class="service-card-desc">Brake dust, road grime, and curb stains removed. We clean and dress your tires and wheels until they shine like the day you bought them.</div>
         </div>
       </div>
       <div class="service-card reveal">
-        <div class="service-card-img"><img src="https://images.pexels.com/photos/5233271/pexels-photo-5233271.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Complete vehicle wash and care service" loading="lazy"></div>
+        <div class="service-card-img"><img src="images/website-8.jpg" alt="Blue Corvette being hand dried inside 610 Car Wash bay" loading="lazy"></div>
         <div class="service-card-body">
           <div class="service-card-name">Vacuuming & Windows</div>
           <div class="service-card-desc">Complete interior vacuum with crevice tool. Crystal clear windows inside and out. Included with every full-service wash or available standalone.</div>
         </div>
       </div>
       <div class="service-card reveal">
-        <div class="service-card-img"><img src="https://images.pexels.com/photos/6872609/pexels-photo-6872609.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Luxury car getting ozone treatment" loading="lazy"></div>
+        <div class="service-card-img"><img src="images/website-6.jpg" alt="White Porsche and Alfa Romeo in 610 Car Wash detailing garage" loading="lazy"></div>
         <div class="service-card-body">
           <div class="service-card-name">Ozone Treatment</div>
           <div class="service-card-desc">Eliminate stubborn odors from smoke, pets, food, and mildew. Our ozone generator neutralizes bacteria and leaves your cabin fresh at the molecular level.</div>
@@ -489,13 +491,13 @@ section{padding:100px 0;position:relative}
       <h2 class="section-title">Clean Results, Every Time</h2>
     </div>
     <div class="gallery-grid reveal">
-      <div class="gallery-item"><img src="https://images.pexels.com/photos/1213294/pexels-photo-1213294.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Red car going through car wash tunnel" loading="lazy"></div>
-      <div class="gallery-item"><img src="https://images.pexels.com/photos/4870702/pexels-photo-4870702.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hand scrubbing car headlight" loading="lazy"></div>
-      <div class="gallery-item"><img src="https://images.pexels.com/photos/6872176/pexels-photo-6872176.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Man cleaning car exterior with sponge" loading="lazy"></div>
-      <div class="gallery-item"><img src="https://images.pexels.com/photos/4886355/pexels-photo-4886355.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Car wash foam and water spray" loading="lazy"></div>
-      <div class="gallery-item"><img src="https://images.pexels.com/photos/3807386/pexels-photo-3807386.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Worker drying car after wash" loading="lazy"></div>
-      <div class="gallery-item"><img src="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Detailing interior surfaces" loading="lazy"></div>
-      <div class="gallery-item"><img src="https://images.pexels.com/photos/6872167/pexels-photo-6872167.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Shiny black car after professional wash" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/brochure-22.jpeg" alt="610 Car Wash team deep cleaning car seat with professional vacuum" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/brochure-31.jpeg" alt="Interior door panel being brushed and cleaned at 610 Car Wash" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/brochure-5.jpeg" alt="Clean Mercedes wheel after 610 Car Wash detailing" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/website-4.jpg" alt="Blue Corvette Z06 entering 610 Car Wash conveyor" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/brochure-13.jpeg" alt="Worker cleaning dashboard at 610 Car Wash Stafford VA" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/website-15.jpg" alt="Mercedes hood ornament with 610 Car Wash sign in background" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/website-14.jpg" alt="White Porsche 911 Turbo arriving at 610 Car Wash conveyor" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -577,10 +579,22 @@ section{padding:100px 0;position:relative}
     <div class="timeline" id="timeline">
       <div class="timeline-line"></div>
       <div class="timeline-progress" id="timelineProgress"></div>
-      <div class="timeline-step"><div class="timeline-dot"></div><div class="timeline-num">Step 01</div><div class="timeline-title">Pull In</div><div class="timeline-desc">Drive into our bay at 389 Garrisonville Rd. Our team greets you, walks around your vehicle, and helps you choose the right service for today.</div></div>
-      <div class="timeline-step"><div class="timeline-dot"></div><div class="timeline-num">Step 02</div><div class="timeline-title">We Go to Work</div><div class="timeline-desc">Our brushless system cleans your exterior without touching your paint. For full-service and detail packages, our team handles the interior at the same time.</div></div>
-      <div class="timeline-step"><div class="timeline-dot"></div><div class="timeline-num">Step 03</div><div class="timeline-title">Hand Finish</div><div class="timeline-desc">Every vehicle gets a hand dry, window wipe, and tire dressing. We inspect the results before you do. Nothing leaves unless it meets our standard.</div></div>
-      <div class="timeline-step"><div class="timeline-dot"></div><div class="timeline-num">Step 04</div><div class="timeline-title">Drive Out Clean</div><div class="timeline-desc">Pay with any method you prefer. Roll out with a vehicle that looks, feels, and smells like the day you bought it. See you next time.</div></div>
+      <svg class="timeline-car" id="timelineCar" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 35 C15 35 20 15 35 12 L65 12 C80 15 85 35 85 35" fill="#C41E2A" stroke="#8B1520" stroke-width="1.5"/>
+        <path d="M30 12 C32 5 40 2 50 2 C60 2 68 5 70 12" fill="#4A9BFF" opacity=".3" stroke="#2B7DE9" stroke-width=".5"/>
+        <rect x="10" y="35" width="80" height="12" rx="3" fill="#C41E2A" stroke="#8B1520" stroke-width="1"/>
+        <circle cx="25" cy="48" r="10" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+        <circle cx="25" cy="48" r="5" fill="#444"/>
+        <circle cx="25" cy="48" r="2" fill="#666"/>
+        <circle cx="75" cy="48" r="10" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+        <circle cx="75" cy="48" r="5" fill="#444"/>
+        <circle cx="75" cy="48" r="2" fill="#666"/>
+        <text x="50" y="30" text-anchor="middle" fill="#fff" font-size="14" font-weight="700" font-family="sans-serif">610</text>
+      </svg>
+      <div class="timeline-step"><div class="timeline-dot"><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="#1a1a1a" stroke="#333" stroke-width="2"/><circle cx="14" cy="14" r="7" fill="#333"/><circle cx="14" cy="14" r="3" fill="#555"/></svg></div><div class="timeline-num">Step 01</div><div class="timeline-title">Pull In</div><div class="timeline-desc">Drive into our bay at 389 Garrisonville Rd. Our team greets you, walks around your vehicle, and helps you choose the right service for today.</div></div>
+      <div class="timeline-step"><div class="timeline-dot"><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="#1a1a1a" stroke="#333" stroke-width="2"/><circle cx="14" cy="14" r="7" fill="#333"/><circle cx="14" cy="14" r="3" fill="#555"/></svg></div><div class="timeline-num">Step 02</div><div class="timeline-title">We Go to Work</div><div class="timeline-desc">Our brushless system cleans your exterior without touching your paint. For full-service and detail packages, our team handles the interior at the same time.</div></div>
+      <div class="timeline-step"><div class="timeline-dot"><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="#1a1a1a" stroke="#333" stroke-width="2"/><circle cx="14" cy="14" r="7" fill="#333"/><circle cx="14" cy="14" r="3" fill="#555"/></svg></div><div class="timeline-num">Step 03</div><div class="timeline-title">Hand Finish</div><div class="timeline-desc">Every vehicle gets a hand dry, window wipe, and tire dressing. We inspect the results before you do. Nothing leaves unless it meets our standard.</div></div>
+      <div class="timeline-step"><div class="timeline-dot"><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="#1a1a1a" stroke="#333" stroke-width="2"/><circle cx="14" cy="14" r="7" fill="#333"/><circle cx="14" cy="14" r="3" fill="#555"/></svg></div><div class="timeline-num">Step 04</div><div class="timeline-title">Drive Out Clean</div><div class="timeline-desc">Pay with any method you prefer. Roll out with a vehicle that looks, feels, and smells like the day you bought it. See you next time.</div></div>
     </div>
   </div>
 </section>
@@ -689,7 +703,7 @@ section{padding:100px 0;position:relative}
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="nav-logo">610 <span>Carwash</span></div>
+        <div class="nav-logo"><img src="logo.png" alt="610 Car Wash" style="height:48px;width:auto"></div>
         <p>Stafford's trusted full-service car wash since 1988. Brushless technology, hand-finished results, and a team that treats your vehicle like their own. Open 6 days a week on Garrisonville Road.</p>
       </div>
       <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="#about">Our Story</a></li><li><a href="#services">Services</a></li><li><a href="#packages">Packages</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li></ul></div>
@@ -743,8 +757,72 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click'
 const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)},{passive:true});
 const reveals=document.querySelectorAll('.reveal');const revealObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});reveals.forEach(el=>revealObs.observe(el));
 document.querySelectorAll('.faq-question').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const answer=item.querySelector('.faq-answer');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-question').setAttribute('aria-expanded','false');i.querySelector('.faq-answer').style.maxHeight=null});if(!isOpen){item.classList.add('open');q.setAttribute('aria-expanded','true');answer.style.maxHeight=answer.scrollHeight+'px'}})});
-const timeline=document.getElementById('timeline');const timelineProgress=document.getElementById('timelineProgress');const steps=document.querySelectorAll('.timeline-step');
-if(timeline&&timelineProgress){const vh=window.innerHeight;const scrollHandler=()=>{const r=timeline.getBoundingClientRect();const progress=Math.max(0,Math.min(1,(vh*.5-r.top)/(r.height-vh*.3)));timelineProgress.style.height=(progress*100)+'%';steps.forEach((step,i)=>{step.classList.toggle('active',progress>=(i+.5)/steps.length)})};const timelineObs=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){window.addEventListener('scroll',scrollHandler,{passive:true});scrollHandler()}else{window.removeEventListener('scroll',scrollHandler)}})},{threshold:0});timelineObs.observe(timeline)}
+
+/* CANVAS VIDEO RENDERER */
+const heroVideo=document.getElementById('heroVideo');
+const heroCanvas=document.getElementById('heroCanvas');
+if(heroVideo&&heroCanvas){
+const ctx=heroCanvas.getContext('2d');
+let animating=false;
+function resizeCanvas(){const w=heroCanvas.parentElement;heroCanvas.width=w.offsetWidth;heroCanvas.height=w.offsetHeight}
+resizeCanvas();window.addEventListener('resize',resizeCanvas);
+function drawFrame(){if(!animating)animating=true;if(heroVideo.readyState>=2)ctx.drawImage(heroVideo,0,0,heroCanvas.width,heroCanvas.height);requestAnimationFrame(drawFrame)}
+function tryPlay(){heroVideo.play().then(()=>{if(!animating)drawFrame()}).catch(()=>{})}
+heroVideo.addEventListener('loadeddata',()=>{resizeCanvas();tryPlay()});
+heroVideo.addEventListener('canplay',tryPlay);
+if(heroVideo.readyState>=2)tryPlay();else heroVideo.load();
+['touchstart','click','scroll'].forEach(evt=>{document.addEventListener(evt,function f(){tryPlay();document.removeEventListener(evt,f)},{once:true,passive:true})});
+}
+
+/* TIMELINE — Red car drives down, bubbles trail behind, tire dots */
+const timeline=document.getElementById('timeline');
+const timelineProgress=document.getElementById('timelineProgress');
+const timelineCar=document.getElementById('timelineCar');
+const steps=document.querySelectorAll('.timeline-step');
+if(timeline&&timelineProgress&&timelineCar){
+const bubbles=[];
+const maxBubbles=40;
+function spawnBubble(y){
+if(bubbles.length>=maxBubbles)return;
+const b=document.createElement('div');
+b.className='bubble';
+const size=3+Math.random()*8;
+b.style.width=size+'px';
+b.style.height=size+'px';
+b.style.left=(-size/2+Math.random()*12-6)+'px';
+b.style.top=y+'px';
+b.style.setProperty('--drift',(Math.random()*10-5)+'px');
+b.style.opacity=.3+Math.random()*.4;
+b.style.animationDuration=(1+Math.random()*2)+'s';
+timelineProgress.appendChild(b);
+bubbles.push({el:b,born:Date.now()});
+}
+let lastBubbleY=-1;
+const scrollHandler=()=>{
+const r=timeline.getBoundingClientRect();
+const vh=window.innerHeight;
+const progress=Math.max(0,Math.min(1,(vh*.5-r.top)/(r.height-vh*.3)));
+const h=progress*timeline.offsetHeight;
+timelineProgress.style.height=h+'px';
+timelineCar.style.top=h+'px';
+if(Math.abs(h-lastBubbleY)>8){
+for(let i=0;i<3;i++)spawnBubble(h-Math.random()*20);
+lastBubbleY=h;
+}
+const now=Date.now();
+for(let i=bubbles.length-1;i>=0;i--){
+if(now-bubbles[i].born>4000){
+bubbles[i].el.style.opacity='0';
+setTimeout(()=>{if(bubbles[i]&&bubbles[i].el.parentNode)bubbles[i].el.parentNode.removeChild(bubbles[i].el)},500);
+bubbles.splice(i,1);
+}
+}
+steps.forEach((step,i)=>{step.classList.toggle('active',progress>=(i+.5)/steps.length)});
+};
+const timelineObs=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){window.addEventListener('scroll',scrollHandler,{passive:true});scrollHandler()}else{window.removeEventListener('scroll',scrollHandler)}})},{threshold:0});
+timelineObs.observe(timeline);
+}
+
 let popupShown={welcome:false,exit:false,review:false};let popupIsOpen=false;
 function showPopup(id,key){if(popupIsOpen)return;document.getElementById(id).classList.add('active');popupShown[key]=true;popupIsOpen=true}
 function closePopup(id){document.getElementById(id).classList.remove('active');popupIsOpen=false;if(id==='popupWelcome'&&!popupShown.review){const p=window.scrollY/(document.body.scrollHeight-window.innerHeight);if(p>.7)showPopup('popupReview','review')}}
@@ -752,7 +830,6 @@ setTimeout(()=>{if(!popupShown.welcome)showPopup('popupWelcome','welcome')},4000
 document.addEventListener('mouseout',e=>{if(e.clientY<5&&!popupShown.exit&&popupShown.welcome)showPopup('popupExit','exit')});
 window.addEventListener('scroll',()=>{const p=window.scrollY/(document.body.scrollHeight-window.innerHeight);if(p>.7&&!popupShown.review&&popupShown.welcome)showPopup('popupReview','review')},{passive:true});
 document.querySelectorAll('.popup-overlay').forEach(o=>{o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('active')})});
-if(window.innerWidth<768){const v=document.querySelector('.hero-video');if(v)v.removeAttribute('autoplay')}
 </script>
 </body>
 </html>
