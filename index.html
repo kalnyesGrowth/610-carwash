@@ -175,7 +175,7 @@ section{padding:100px 0;position:relative}
 .timeline-line{position:absolute;left:24px;top:0;width:4px;height:100%;background:var(--white-10);border-radius:2px}
 .timeline-progress{position:absolute;left:24px;top:0;width:4px;height:0;border-radius:2px;transition:height .1s linear;background:transparent}
 .timeline-bubbles{position:absolute;left:24px;top:0;width:4px;height:0;border-radius:2px;overflow:visible}
-.timeline-car{position:absolute;left:26px;width:50px;height:50px;transform:translate(-50%,-25px) rotate(90deg);z-index:10;transition:top .1s linear;filter:drop-shadow(0 2px 8px rgba(0,0,0,.6))}
+.timeline-car{position:absolute;left:26px;width:60px;height:auto;transform:translate(-50%,-15px) rotate(90deg);z-index:10;transition:top .1s linear;filter:drop-shadow(0 2px 8px rgba(0,0,0,.6))}
 .timeline-step{position:relative;padding-left:72px;padding-bottom:48px;opacity:.3;transform:translateX(-10px);transition:all .6s cubic-bezier(.25,.46,.45,.94)}
 .timeline-step.active{opacity:1;transform:translateX(0)}
 .timeline-dot{position:absolute;left:12px;top:4px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;transition:all .4s}
@@ -309,7 +309,7 @@ section{padding:100px 0;position:relative}
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo"><img src="logo.png" alt="610 Car Wash" loading="eager"></a>
+    <a href="#" class="nav-logo"><img src="car.png" alt="610 Car Wash" loading="eager"></a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
@@ -351,7 +351,8 @@ section{padding:100px 0;position:relative}
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       Stafford's Trusted Car Wash Since 1988
     </div>
-    <h1><img src="logo.png" alt="610 Car Wash" class="hero-logo"></h1>
+    <h1><img src="car.png" alt="610 Car Wash" class="hero-logo"></h1>
+    <img src="logo-text.png" alt="610 Car Wash - Stafford VA - Since 1988" style="max-width:280px;width:80%;height:auto;margin:0 auto 24px;display:block;filter:drop-shadow(0 4px 20px rgba(0,0,0,.5))">
     <p class="hero-desc">Full-service car wash and detailing on Route 610. Brushless technology, hand-finished results. Preserving your automotive investment for over 35 years.</p>
     <div class="hero-btns">
       <a href="tel:+15406598885" class="btn btn-outline btn-thunder">Call (540) 659-8885</a>
@@ -579,18 +580,7 @@ section{padding:100px 0;position:relative}
     <div class="timeline" id="timeline">
       <div class="timeline-line"></div>
       <div class="timeline-progress" id="timelineProgress"></div>
-      <svg class="timeline-car" id="timelineCar" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M15 35 C15 35 20 15 35 12 L65 12 C80 15 85 35 85 35" fill="#C41E2A" stroke="#8B1520" stroke-width="1.5"/>
-        <path d="M30 12 C32 5 40 2 50 2 C60 2 68 5 70 12" fill="#4A9BFF" opacity=".3" stroke="#2B7DE9" stroke-width=".5"/>
-        <rect x="10" y="35" width="80" height="12" rx="3" fill="#C41E2A" stroke="#8B1520" stroke-width="1"/>
-        <circle cx="25" cy="48" r="10" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
-        <circle cx="25" cy="48" r="5" fill="#444"/>
-        <circle cx="25" cy="48" r="2" fill="#666"/>
-        <circle cx="75" cy="48" r="10" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
-        <circle cx="75" cy="48" r="5" fill="#444"/>
-        <circle cx="75" cy="48" r="2" fill="#666"/>
-        <text x="50" y="30" text-anchor="middle" fill="#fff" font-size="14" font-weight="700" font-family="sans-serif">610</text>
-      </svg>
+      <img class="timeline-car" id="timelineCar" src="car.png" alt="610 Car">
       <div class="timeline-step"><div class="timeline-dot"><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="#1a1a1a" stroke="#333" stroke-width="2"/><circle cx="14" cy="14" r="7" fill="#333"/><circle cx="14" cy="14" r="3" fill="#555"/></svg></div><div class="timeline-num">Step 01</div><div class="timeline-title">Pull In</div><div class="timeline-desc">Drive into our bay at 389 Garrisonville Rd. Our team greets you, walks around your vehicle, and helps you choose the right service for today.</div></div>
       <div class="timeline-step"><div class="timeline-dot"><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="#1a1a1a" stroke="#333" stroke-width="2"/><circle cx="14" cy="14" r="7" fill="#333"/><circle cx="14" cy="14" r="3" fill="#555"/></svg></div><div class="timeline-num">Step 02</div><div class="timeline-title">We Go to Work</div><div class="timeline-desc">Our brushless system cleans your exterior without touching your paint. For full-service and detail packages, our team handles the interior at the same time.</div></div>
       <div class="timeline-step"><div class="timeline-dot"><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="#1a1a1a" stroke="#333" stroke-width="2"/><circle cx="14" cy="14" r="7" fill="#333"/><circle cx="14" cy="14" r="3" fill="#555"/></svg></div><div class="timeline-num">Step 03</div><div class="timeline-title">Hand Finish</div><div class="timeline-desc">Every vehicle gets a hand dry, window wipe, and tire dressing. We inspect the results before you do. Nothing leaves unless it meets our standard.</div></div>
@@ -703,7 +693,7 @@ section{padding:100px 0;position:relative}
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="nav-logo"><img src="logo.png" alt="610 Car Wash" style="height:48px;width:auto"></div>
+        <div class="nav-logo"><img src="car.png" alt="610 Car Wash" style="height:48px;width:auto"></div>
         <p>Stafford's trusted full-service car wash since 1988. Brushless technology, hand-finished results, and a team that treats your vehicle like their own. Open 6 days a week on Garrisonville Road.</p>
       </div>
       <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="#about">Our Story</a></li><li><a href="#services">Services</a></li><li><a href="#packages">Packages</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li></ul></div>
