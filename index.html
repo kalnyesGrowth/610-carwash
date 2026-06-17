@@ -82,7 +82,8 @@ section{padding:100px 0;position:relative}
 /* HERO */
 .hero{position:relative;height:100vh;min-height:700px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:0}
 .hero-video-wrap{position:absolute;inset:0;z-index:0}
-.hero-poster{position:absolute;inset:0;background:url('poster.jpg') center/cover no-repeat;z-index:0}
+.hero-poster{position:absolute;inset:0;background:url('poster-desktop.jpg') center/cover no-repeat;z-index:0}
+@media(max-width:768px){.hero-poster{background-image:url('poster-mobile.jpg')}}
 .hero-video-wrap canvas{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:1}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,17,23,.6) 0%,rgba(13,17,23,.75) 50%,rgba(13,17,23,.95) 100%);z-index:2}
 .hero-content{position:relative;z-index:3;max-width:840px;padding:0 24px}
@@ -343,6 +344,9 @@ section{padding:100px 0;position:relative}
     <canvas id="heroCanvas"></canvas>
     <video id="heroVideo" autoplay muted loop playsinline style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none">
       <source src="hero.mp4" type="video/mp4">
+    </video>
+    <video id="heroVideoMobile" autoplay muted loop playsinline style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none">
+      <source src="hero-mobile.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
   </div>
@@ -752,15 +756,20 @@ const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{n
 const reveals=document.querySelectorAll('.reveal');const revealObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});reveals.forEach(el=>revealObs.observe(el));
 document.querySelectorAll('.faq-question').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const answer=item.querySelector('.faq-answer');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-question').setAttribute('aria-expanded','false');i.querySelector('.faq-answer').style.maxHeight=null});if(!isOpen){item.classList.add('open');q.setAttribute('aria-expanded','true');answer.style.maxHeight=answer.scrollHeight+'px'}})});
 
-/* CANVAS VIDEO RENDERER */
-const heroVideo=document.getElementById('heroVideo');
+/* CANVAS VIDEO RENDERER — dual source (desktop/mobile) */
+const heroDesktop=document.getElementById('heroVideo');
+const heroMobile=document.getElementById('heroVideoMobile');
 const heroCanvas=document.getElementById('heroCanvas');
+const isMobile=window.innerWidth<=768;
+const heroVideo=isMobile?heroMobile:heroDesktop;
+if(isMobile&&heroDesktop){heroDesktop.pause();heroDesktop.removeAttribute('src');heroDesktop.load()}
+if(!isMobile&&heroMobile){heroMobile.pause();heroMobile.removeAttribute('src');heroMobile.load()}
 if(heroVideo&&heroCanvas){
 const ctx=heroCanvas.getContext('2d');
 let animating=false;
 function resizeCanvas(){const w=heroCanvas.parentElement;heroCanvas.width=w.offsetWidth;heroCanvas.height=w.offsetHeight}
 resizeCanvas();window.addEventListener('resize',resizeCanvas);
-function drawFrame(){if(!animating)animating=true;if(heroVideo.readyState>=2)ctx.drawImage(heroVideo,0,0,heroCanvas.width,heroCanvas.height);requestAnimationFrame(drawFrame)}
+function drawFrame(){if(!animating)animating=true;if(heroVideo.readyState>=2){const vw=heroVideo.videoWidth,vh=heroVideo.videoHeight,cw=heroCanvas.width,ch=heroCanvas.height;const scale=Math.max(cw/vw,ch/vh);const dw=vw*scale,dh=vh*scale;ctx.drawImage(heroVideo,(cw-dw)/2,(ch-dh)/2,dw,dh)}requestAnimationFrame(drawFrame)}
 function tryPlay(){heroVideo.play().then(()=>{if(!animating)drawFrame()}).catch(()=>{})}
 heroVideo.addEventListener('loadeddata',()=>{resizeCanvas();tryPlay()});
 heroVideo.addEventListener('canplay',tryPlay);
